@@ -3,7 +3,7 @@ import yaml
 import json
 from linkml_runtime import SchemaView
 from linkml_runtime.dumpers import YAMLDumper
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Any, Union
 
 from importlib.metadata import version
 from sssom_schema import Mapping
@@ -14,10 +14,12 @@ from risk_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     RiskControl,
     RiskIncident,
     RiskTaxonomy,
+    RiskGroup,
 )
 from risk_atlas_nexus.blocks.inference.templates import COT_TEMPLATE, AI_TASKS_TEMPLATE
 from risk_atlas_nexus.blocks.risk_detector import AutoRiskDetector
 from risk_atlas_nexus.blocks.risk_explorer import RiskExplorer
+from risk_atlas_nexus.blocks.risk_explorer.airbench_explorer import AIRBenchExplorer
 from risk_atlas_nexus.blocks.risk_mapping import RiskMapper
 from risk_atlas_nexus.blocks.inference import InferenceEngine
 from risk_atlas_nexus.toolkit.data_utils import load_yamls_to_container
@@ -56,6 +58,7 @@ class RiskAtlasNexus:
         ontology = load_yamls_to_container(base_dir)
         self._ontology = ontology
         self._risk_explorer = RiskExplorer(ontology)
+        self._airbench_explorer = AIRBenchExplorer(risk_explorer=self._risk_explorer)
         logger.info(f"Created RiskAtlasNexus instance. Base_dir: %s", base_dir)
 
     def export(cls, export_path):
@@ -690,3 +693,103 @@ class RiskAtlasNexus:
             risk=risk, risk_id=risk_id, taxonomy=taxonomy
         )
         return related_risk_incidents
+        
+    # AIR-Bench specific methods
+    
+    def get_airbench_risks(cls) -> List[Risk]:
+        """Get all AIR-Bench risks
+
+        Returns:
+            List[Risk]: List of AIR-Bench risks
+        """
+        return cls._airbench_explorer.get_airbench_risks()
+    
+    def get_airbench_risk_groups(cls) -> List[RiskGroup]:
+        """Get all AIR-Bench risk groups
+
+        Returns:
+            List[RiskGroup]: List of AIR-Bench risk groups
+        """
+        return cls._airbench_explorer.get_airbench_risk_groups()
+    
+    def get_airbench_tier_categories(cls) -> Dict[int, List[Dict[str, str]]]:
+        """Get the tier structure of AIR-Bench
+
+        Returns:
+            Dict[int, List[Dict[str, str]]]: Dictionary mapping tier levels to lists of categories
+        """
+        return cls._airbench_explorer.get_tier_categories()
+    
+    def get_airbench_tier_for_risk(cls, risk: Union[Risk, str]) -> Dict[str, Any]:
+        """Get the tier information for an AIR-Bench risk
+
+        Args:
+            risk: Risk object or risk ID
+
+        Returns:
+            Dict[str, Any]: Dictionary with tier information
+        """
+        return cls._airbench_explorer.get_tier_for_risk(risk)
+    
+    def get_airbench_risks_by_tier(cls, tier_level: int) -> List[Union[Risk, RiskGroup]]:
+        """Get all AIR-Bench risks or risk groups at a specific tier level
+
+        Args:
+            tier_level: The tier level (1-4)
+
+        Returns:
+            List[Union[Risk, RiskGroup]]: List of risks or risk groups
+        """
+        return cls._airbench_explorer.get_risks_by_tier(tier_level)
+    
+    def get_airbench_mappings_for_risk(cls, risk_id: str) -> Dict[str, List[Dict[str, Any]]]:
+        """Get all mappings for an AIR-Bench risk across taxonomies
+
+        Args:
+            risk_id: ID of the AIR-Bench risk
+
+        Returns:
+            Dict[str, List[Dict[str, Any]]]: Dictionary mapping taxonomy IDs to lists of mappings
+        """
+        return cls._airbench_explorer.get_mappings_for_airbench_risk(risk_id)
+    
+    def get_airbench_risks_by_category(cls, category_id: str) -> List[Risk]:
+        """Get all AIR-Bench risks in a specific category
+
+        Args:
+            category_id: ID of the category (tier 1, 2, or 3)
+
+        Returns:
+            List[Risk]: List of risks in the category
+        """
+        return cls._airbench_explorer.get_airbench_risks_by_category(category_id)
+    
+    def get_airbench_taxonomy_mappings_stats(cls) -> Dict[str, Dict[str, Any]]:
+        """Get statistics about AIR-Bench mappings to other taxonomies
+
+        Returns:
+            Dict[str, Dict[str, Any]]: Dictionary mapping taxonomy IDs to statistics
+        """
+        return cls._airbench_explorer.get_taxonomy_mappings_stats()
+    
+    def get_airbench_regulatory_coverage(cls, risk_id: str) -> Dict[str, Any]:
+        """Get regulatory coverage information for an AIR-Bench risk
+
+        Args:
+            risk_id: ID of the AIR-Bench risk
+
+        Returns:
+            Dict[str, Any]: Dictionary with regulatory coverage information
+        """
+        return cls._airbench_explorer.get_regulatory_coverage(risk_id)
+    
+    def compare_airbench_with_taxonomy(cls, taxonomy_id: str) -> Dict[str, Any]:
+        """Compare AIR-Bench with another taxonomy
+
+        Args:
+            taxonomy_id: ID of the taxonomy to compare with
+
+        Returns:
+            Dict[str, Any]: Dictionary with comparison results
+        """
+        return cls._airbench_explorer.compare_taxonomies(taxonomy_id)
