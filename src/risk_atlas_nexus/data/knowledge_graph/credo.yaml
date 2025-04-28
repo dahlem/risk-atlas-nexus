@@ -87,8 +87,9 @@ riskgroups:
 risks:
 - id: credo-risk-001
   name: AI welfare and rights (Slattery et al., 2024)
-  description: The AI system's potential sentience may raise ethical considerations regarding its treatment, including 
-    discussions around its potential rights and welfare, particularly as it becomes more advanced and autonomous.
+  description: The AI system's potential sentience may raise ethical considerations
+    regarding its treatment, including discussions around its potential rights and
+    welfare, particularly as it becomes more advanced and autonomous.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-ai-agency
 - id: credo-risk-002
@@ -157,8 +158,9 @@ risks:
   isPartOf: credo-rg-explainability-&-transparency
 - id: credo-risk-008
   name: Opaque system architecture
-  description: The AI system's internal structure and decision-making process may not be understandable or accessible 
-    to stakeholders, including developers, auditors, or end-users.
+  description: The AI system's internal structure and decision-making process may
+    not be understandable or accessible to stakeholders, including developers, auditors,
+    or end-users.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
 - id: credo-risk-009
@@ -188,9 +190,10 @@ risks:
   isPartOf: credo-rg-fairness-&-bias
 - id: credo-risk-011
   name: Disparate model performance (Slattery et al., 2024; IBM, 2024)
-  description: The AI system may exhibit unjustified or harmful differences in accuracy, quality, or outcomes across 
-    demographic groups, potentially leading to unfair treatment and discrimination. This includes both disparate error 
-    rates that affect opportunity and disparate outcome rates that affect group-level results.
+  description: The AI system may exhibit unjustified or harmful differences in accuracy,
+    quality, or outcomes across demographic groups, potentially leading to unfair
+    treatment and discrimination. This includes both disparate error rates that affect
+    opportunity and disparate outcome rates that affect group-level results.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-fairness-&-bias
 - id: credo-risk-012
@@ -229,8 +232,8 @@ risks:
   isPartOf: credo-rg-harmful-content
 - id: credo-risk-015
   name: Dangerous or violent content (IBM, 2024)
-  description: 'The AI system may produce content that incites violence or provides
-    instructions for committing crimes.'
+  description: The AI system may produce content that incites violence or provides
+    instructions for committing crimes.
   hasRelatedAction:
   - credo-act-control-017
   - credo-act-control-018
@@ -252,7 +255,7 @@ risks:
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-017
-  name: 'Inadequate AI literacy and communication'
+  name: Inadequate AI literacy and communication
   description: The AI system's capabilities, limitations, and appropriate use cases
     may be insufficiently understood or communicated within the organization, potentially
     resulting in ineffective implementation or failure to achieve desired outcomes.
@@ -270,46 +273,50 @@ risks:
   - credo-act-control-025
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-human-ai-interaction
-- id: credo-risk-019  
+- id: credo-risk-019
   name: Loss of human agency and autonomy (Slattery et al., 2024; IBM, 2024)
-  description: The AI system may make decisions that diminish human control and autonomy, potentially leading to humans 
-   feeling disempowered, losing the ability to shape a fulfilling life trajectory, or becoming cognitively enfeebled.
+  description: The AI system may make decisions that diminish human control and autonomy,
+    potentially leading to humans feeling disempowered, losing the ability to shape
+    a fulfilling life trajectory, or becoming cognitively enfeebled.
   isDefinedByTaxonomy: credo-ucf
-  isPartOf: credo-rg-human-ai-interaction	
+  isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-020
   name: Emotional entanglement (Slattery et al., 2024)
-  description: Users may develop complex emotional attachments or dependencies on the AI system, potentially affecting 
-   mental health andsocial relationships.
+  description: Users may develop complex emotional attachments or dependencies on
+    the AI system, potentially affecting mental health andsocial relationships.
   isDefinedByTaxonomy: credo-ucf
-  isPartOf: credo-rg-human-ai-interaction	
+  isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-021
-  name: False or misleading information	
-  description: The AI system may unintentionally generate or amplify false or misleading information, potentially 
-   leading to public misinformation, erosion of trust, and poor decision-making.
+  name: False or misleading information
+  description: The AI system may unintentionally generate or amplify false or misleading
+    information, potentially leading to public misinformation, erosion of trust, and
+    poor decision-making.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-information-integrity
-- id: credo-risk-022	
+- id: credo-risk-022
   name: Pollution of information ecosystem (Slattery et al., 2024; AI, 2023)
-  description: The AI system may create highly personalized misinformation 'filter bubbles' where individuals only 
-   see content that matches their existing beliefs
+  description: The AI system may create highly personalized misinformation 'filter
+    bubbles' where individuals only see content that matches their existing beliefs
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-information-integrity
-- id: credo-risk-023	
+- id: credo-risk-023
   name: Regulatory compliance
-  description: The AI system may fail to comply with existing or emerging regulations and standards, potentially 
-   leading to legal penalties,fines, or operational restrictions.
+  description: The AI system may fail to comply with existing or emerging regulations
+    and standards, potentially leading to legal penalties,fines, or operational restrictions.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-legal
 - id: credo-risk-024
-  name: Civil liability	
-  description: The AI system may cause harm against individuals or organizations that results in civil lawsuits, 
-   potentially relating to issues like defamation, negligence, or privacy violations.
+  name: Civil liability
+  description: The AI system may cause harm against individuals or organizations that
+    results in civil lawsuits, potentially relating to issues like defamation, negligence,
+    or privacy violations.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-legal
 - id: credo-risk-025
-  name: Corporate liability (IBM, 2024)	
-  description: The AI system's use may lead to legal action or penalties against corporations for intellectual property 
-   infringement, AI-related misconduct, violations of fiduciary duty, or failure to adequately oversee AI systems.
+  name: Corporate liability (IBM, 2024)
+  description: The AI system's use may lead to legal action or penalties against corporations
+    for intellectual property infringement, AI-related misconduct, violations of fiduciary
+    duty, or failure to adequately oversee AI systems.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-legal
 - id: credo-risk-026
@@ -360,22 +367,23 @@ risks:
   isPartOf: credo-rg-malicious-use
 - id: credo-risk-030
   name: Integration challenges with existing systems
-  description: The AI system may face difficulties in incorporating into existing technological infrastructure, 
-   processes, or workflows, potentially leading to operational disruptions, data silos, or reduced efficiency
+  description: The AI system may face difficulties in incorporating into existing
+    technological infrastructure, processes, or workflows, potentially leading to
+    operational disruptions, data silos, or reduced efficiency
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-operational
 - id: credo-risk-031
-  name: Maintenance and update requirements	
-  description: The AI system may require ongoing updates, model retraining, and maintenance to ensure continued 
-   performance, timeliness, and relevance, which can be resource-intensive and potentially introduce new risks if 
-   updates are overlooked or hastily applied.
+  name: Maintenance and update requirements
+  description: The AI system may require ongoing updates, model retraining, and maintenance
+    to ensure continued performance, timeliness, and relevance, which can be resource-intensive
+    and potentially introduce new risks if updates are overlooked or hastily applied.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-operational
 - id: credo-risk-032
   name: Scalability issues
-  description: The AI system may struggle to scale to meet increasing demands or to operate across larger datasets or 
-   user bases, potentially resulting in performance bottlenecks, increased costs, or inability to meet growing business 
-   needs.
+  description: The AI system may struggle to scale to meet increasing demands or to
+    operate across larger datasets or user bases, potentially resulting in performance
+    bottlenecks, increased costs, or inability to meet growing business needs.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-operational
 - id: credo-risk-033
@@ -435,28 +443,31 @@ risks:
   - credo-act-control-026
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-privacy
-- id: credo-risk-038	
-  name: Compromised confidential information (Slattery et al., 2024; IBM, 2024;AI, 2023)
-  description: The AI system, including its supporting compute infrastructure, may serve as an attack vector for 
-   intrusion into cyber-physical or cloud environments, or enable exfiltration of secrets.
+- id: credo-risk-038
+  name: Compromised confidential information (Slattery et al., 2024; IBM, 2024;AI,
+    2023)
+  description: The AI system, including its supporting compute infrastructure, may
+    serve as an attack vector for intrusion into cyber-physical or cloud environments,
+    or enable exfiltration of secrets.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-security
 - id: credo-risk-039
   name: AI model and intellectual property theft
-  description: AI model and intellectual property theft - Unauthorized copying
-   of trained models and associated AI intellectual property
+  description: AI model and intellectual property theft - Unauthorized copying of
+    trained models and associated AI intellectual property
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-security
 - id: credo-risk-040
   name: AI-generated security weaknesses (Slattery et al., 2024; IBM, 2024; AI, 2023)
-  description: "AI system security vulnerabilities: Implementation weaknesses in AI system architecture and 
-   infrastructure"
+  description: 'AI system security vulnerabilities: Implementation weaknesses in AI
+    system architecture and infrastructure'
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-security
 - id: credo-risk-041
-  name: Vulnerability to adversarial attacks (Slattery et al., 2024; IBM, 2024; AI, 2023)
-  description: The AI system may be vulnerable to adversarial attacks, including prompt-based attacks, which may induce 
-   the model to behave outside of its intended functionality.
+  name: Vulnerability to adversarial attacks (Slattery et al., 2024; IBM, 2024; AI,
+    2023)
+  description: The AI system may be vulnerable to adversarial attacks, including prompt-based
+    attacks, which may induce the model to behave outside of its intended functionality.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-security
 - id: credo-risk-042
@@ -512,23 +523,24 @@ risks:
   - credo-act-control-042
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-societal-impact
-- id: credo-risk-047	
-  name: Insufficient upstream transparency (AI, 2023)	
-  description: "The AI system's upstream providers or components in the value chain may lack transparency, potentially 
-   increasing uncertainty and risk, and making it challenging to assess the system's compliance, performance, or 
-   security."
+- id: credo-risk-047
+  name: Insufficient upstream transparency (AI, 2023)
+  description: The AI system's upstream providers or components in the value chain
+    may lack transparency, potentially increasing uncertainty and risk, and making
+    it challenging to assess the system's compliance, performance, or security.
   isPartOf: credo-rg-third-party
   isDefinedByTaxonomy: credo-ucf
 - id: credo-risk-048
   name: Upstream third-party dependencies (AI, 2023)
-  description: The AI system's reliance on third-party developed models, compute, or other resources, may potentially limit 
-   operational flexibility and introduce unforeseen risks or dependencies.
+  description: The AI system's reliance on third-party developed models, compute,
+    or other resources, may potentially limit operational flexibility and introduce
+    unforeseen risks or dependencies.
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-third-party
 - id: credo-risk-049
-  name: Vendor lock-in and innovation barriers (AI, 2023)	
-  description: "Vendor lock-in and innovation barriers: Technical or commercial constraints preventing adoption of 
-   improved AI solutions"
+  name: Vendor lock-in and innovation barriers (AI, 2023)
+  description: 'Vendor lock-in and innovation barriers: Technical or commercial constraints
+    preventing adoption of improved AI solutions'
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-third-party
 actions:
@@ -546,56 +558,69 @@ actions:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-002
-  name:	Implement AI asset protection framework
-  description: Deploy technical protection measures including encryption, secure enclaves, and versioning controls for AI models and associated data.
+  name: Implement AI asset protection framework
+  description: Deploy technical protection measures including encryption, secure enclaves,
+    and versioning controls for AI models and associated data.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-003
-  name:	Establish security validation framework
-  description: Execute comprehensive pre-deployment security validation including AI-specific vulnerability assessments, penetration testing, and security requirement verification.
+  name: Establish security validation framework
+  description: Execute comprehensive pre-deployment security validation including
+    AI-specific vulnerability assessments, penetration testing, and security requirement
+    verification.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-004
-  name:		Implement continuous security testing system
-  description: Deploy ongoing security testing mechanisms including automated vulnerability scanning, continuous security monitoring, and periodic re- assessment of security controls.
+  name: Implement continuous security testing system
+  description: Deploy ongoing security testing mechanisms including automated vulnerability
+    scanning, continuous security monitoring, and periodic re- assessment of security
+    controls.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-005
-  name:		Implement AI security defense system
-  description: Deploy active defense mechanisms combining continuous security monitoring, input validation, adversarial detection, and adaptive response capabilities specific to AI systems.
+  name: Implement AI security defense system
+  description: Deploy active defense mechanisms combining continuous security monitoring,
+    input validation, adversarial detection, and adaptive response capabilities specific
+    to AI systems.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-006
-  name:		Establish AI system integration framework
-  description: Define and implement a comprehensive framework for AI system integration including architecture review, compatibility testing, and integration validation processes.
+  name: Establish AI system integration framework
+  description: Define and implement a comprehensive framework for AI system integration
+    including architecture review, compatibility testing, and integration validation
+    processes.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-007
-  name:		Implement AI system lifecycle management
-  description: Deploy systematic processes for AI system maintenance, updates, and retraining, including version control, deployment pipelines, and performance monitoring to ensure consistent system reliability and performance.
+  name: Implement AI system lifecycle management
+  description: Deploy systematic processes for AI system maintenance, updates, and
+    retraining, including version control, deployment pipelines, and performance monitoring
+    to ensure consistent system reliability and performance.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-008
-  name:		Implement scalable AI infrastructure
-  description: Apply architecture and infrastructure practices to ensure AI systems can scale effectively, including load testing, resource monitoring, and capacity planning to maintain performance under increased demand.
+  name: Implement scalable AI infrastructure
+  description: Apply architecture and infrastructure practices to ensure AI systems
+    can scale effectively, including load testing, resource monitoring, and capacity
+    planning to maintain performance under increased demand.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
@@ -660,8 +685,9 @@ actions:
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-013
   name: Implement performance monitoring and robustness system
-  description: Implement continuous monitoring and testing mechanisms to evaluate AI system robustness, generalization 
-   capabilities, and performance stability across varying conditions and environments while in production.
+  description: Implement continuous monitoring and testing mechanisms to evaluate
+    AI system robustness, generalization capabilities, and performance stability across
+    varying conditions and environments while in production.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
@@ -763,9 +789,9 @@ actions:
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-020
   name: Establish information quality assurance framework
-  description: Implement comprehensive mechanisms to assess, verify, and 
-   improve the factual accuracy of AI system outputs, including source validation, fact-checking procedures, and 
-   uncertainty communication protocols.
+  description: Implement comprehensive mechanisms to assess, verify, and improve the
+    factual accuracy of AI system outputs, including source validation, fact-checking
+    procedures, and uncertainty communication protocols.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
@@ -826,12 +852,13 @@ actions:
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-024
   name: Implement AI system usage verification program
-  description: Deploy comprehensive measures to verify user identity, document intended use cases, and ensure AI 
-   system usage complies with instruc- tions. This includes KYC procedures for user verification, clear documentation 
-   of permitted uses, and user acknowledgment of instructions.
+  description: Deploy comprehensive measures to verify user identity, document intended
+    use cases, and ensure AI system usage complies with instruc- tions. This includes
+    KYC procedures for user verification, clear documentation of permitted uses, and
+    user acknowledgment of instructions.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
-  hasRelatedRisk:
+  hasRelatedRisk: null
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
@@ -866,8 +893,9 @@ actions:
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-027
   name: Implement a privacy incident detection and response
-  description: Deploy monitoring and response mechanisms to detect and address potential privacy exposures, including 
-   PII leak detection, sensitive information monitoring, and privacy incident handling procedures.
+  description: Deploy monitoring and response mechanisms to detect and address potential
+    privacy exposures, including PII leak detection, sensitive information monitoring,
+    and privacy incident handling procedures.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
@@ -906,17 +934,20 @@ actions:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-030
-  name: Establish human-AI interaction safety framework	
-  description: Implement comprehensive safeguards to ensure appropriate levels of human oversight, control, and agency in AI system interactions, in- cluding decision autonomy requirements, override capabilities, and de- pendency prevention measures.
+  name: Establish human-AI interaction safety framework
+  description: Implement comprehensive safeguards to ensure appropriate levels of
+    human oversight, control, and agency in AI system interactions, in- cluding decision
+    autonomy requirements, override capabilities, and de- pendency prevention measures.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-031
-  name: Implement psychological impact management system	
-  description: Establish monitoring and intervention procedures to detect and prevent unhealthy user-AI relationships, 
-   including emotional dependency tracking, interaction boundary enforcement, and well-being safeguards.
+  name: Implement psychological impact management system
+  description: Establish monitoring and intervention procedures to detect and prevent
+    unhealthy user-AI relationships, including emotional dependency tracking, interaction
+    boundary enforcement, and well-being safeguards.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
@@ -934,16 +965,22 @@ actions:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-033
-  name: Establish third-party assessment and management framework	
-  description: Establish comprehensive procedures for documenting, assessing, and managing upstream providers and dependencies in the AI system value chain, including transparency requirements, compliance verification, dependency tracking, and contingency planning.
+  name: Establish third-party assessment and management framework
+  description: Establish comprehensive procedures for documenting, assessing, and
+    managing upstream providers and dependencies in the AI system value chain, including
+    transparency requirements, compliance verification, dependency tracking, and contingency
+    planning.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-034
-  name: Establish AI legal compliance process	 
-  description: Evaluate and document how the AI system complies with relevant regulations and standards, identifying use case-specific legal risks and re- quired controls. Apply the organization's legal compliance framework to ensure appropriate safeguards are in place, with clear documenta- tion of compliance assessments and risk mitigations.
+  name: Establish AI legal compliance process
+  description: Evaluate and document how the AI system complies with relevant regulations
+    and standards, identifying use case-specific legal risks and re- quired controls.
+    Apply the organization's legal compliance framework to ensure appropriate safeguards
+    are in place, with clear documenta- tion of compliance assessments and risk mitigations.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
@@ -997,9 +1034,10 @@ actions:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-038
-  name: Establish AI Risk Management System	
-  description: Implement a comprehensive AI risk management system including risk assessment processes, monitoring 
-   frameworks, governance structures, and response procedures.
+  name: Establish AI Risk Management System
+  description: Implement a comprehensive AI risk management system including risk
+    assessment processes, monitoring frameworks, governance structures, and response
+    procedures.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
@@ -1007,8 +1045,9 @@ actions:
   isDefinedByTaxonomy: credo-ucf
 - id: credo-act-control-039
   name: Establish data governance and management practices
-  description: Implement data governance measures used for training, including having a copyright policy and 
-   identifying and documenting data sources, potential biases, and mitigations taken.
+  description: Implement data governance measures used for training, including having
+    a copyright policy and identifying and documenting data sources, potential biases,
+    and mitigations taken.
   dateCreated: 2025-03-07
   dateModified: 2025-03-07
   hasDocumentation:
@@ -1048,4 +1087,3 @@ actions:
   hasDocumentation:
   - credo-doc
   isDefinedByTaxonomy: credo-ucf
-  

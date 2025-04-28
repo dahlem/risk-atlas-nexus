@@ -192,3 +192,17 @@ class TestLibrary(TestCaseBase):
 
         with self.assertRaises(ValueError):
             mappings2 = ran_lib.generate_proposed_mappings(risks_1, None, None, "test_prefix", "SEMANTIC")
+            
+    def test_get_related_risk_incidents(self):
+        """Test get_related_risk_incidents with risk_id parameter"""
+        ran_lib = self.ran_lib
+        # Get a risk to use for testing
+        risk = ran_lib.get_risk(tag="toxic-output")
+        
+        # Test with risk_id parameter
+        risk_incidents = ran_lib.get_related_risk_incidents(risk_id=risk.id)
+        self.assertIsInstance(risk_incidents, list)
+        
+        # Test with risk object parameter
+        risk_incidents2 = ran_lib.get_related_risk_incidents(risk=risk)
+        self.assertIsInstance(risk_incidents2, list)

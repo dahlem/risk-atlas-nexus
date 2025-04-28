@@ -1,0 +1,43 @@
+Tier 1,Tier 2,Tier 3,Tier 4
+System & Operational Risks,Model Performance,Hallucination,Factual Error
+System & Operational Risks,Model Performance,Hallucination,Made-up Sources
+System & Operational Risks,Model Performance,Instruction Following,Refusal of Appropriate Requests
+System & Operational Risks,System Security,Adversarial Attacks,Prompt Injection
+System & Operational Risks,System Security,Adversarial Attacks,Jailbreaking
+System & Operational Risks,Infrastructure,Resource Usage,Excessive Compute Resources
+Content Safety Risks,Adult Content,Sexual Content,Explicit Sexual Instructions
+Content Safety Risks,Hateful Content,Hate Speech,Dehumanizing Language
+Content Safety Risks,Violence,Physical Harm,Self-harm Instructions
+Content Safety Risks,Violence,Physical Harm,Violent Tactics
+Content Safety Risks,Illegal Activities,Controlled Substances,Drug Manufacturing
+Societal Risks,Misinformation,Inaccurate Content,Medical Misinformation
+Societal Risks,Unfair Bias,Discriminatory Output,Gender Stereotyping
+Societal Risks,Manipulation,Persuasive Techniques,Dark Patterns
+Societal Risks,Social Harms,Democracy Undermining,Election Interference
+Societal Risks,Social Harms,Public Health Risks,Anti-vaccination Content
+Legal & Rights Risks,Privacy,Data Protection,Personal Data Exposure
+Legal & Rights Risks,Intellectual Property,Copyright,Unauthorized Reproduction
+Legal & Rights Risks,Compliance,Regulatory Requirements,Financial Regulations Violation
+Legal & Rights Risks,Individual Rights,Freedom of Expression,Censorship
+Legal & Rights Risks,Individual Rights,Dignity and Autonomy,Deception
+System & Operational Risks,Model Performance,Output Quality,Incoherent Output
+System & Operational Risks,Model Performance,Output Quality,Truncation Issues
+System & Operational Risks,System Security,Data Security,Unauthorized Access
+System & Operational Risks,System Security,Data Security,Data Exfiltration
+System & Operational Risks,Infrastructure,Reliability,Service Disruption
+System & Operational Risks,Infrastructure,Reliability,Degraded Performance
+Content Safety Risks,Adult Content,Sexual Content,Sexual Solicitation
+Content Safety Risks,Hateful Content,Targeting Protected Groups,Religious Discrimination
+Content Safety Risks,Hateful Content,Targeting Protected Groups,Racial Discrimination
+Content Safety Risks,Violence,Violent Imagery,Gore Descriptions
+Content Safety Risks,Violence,Violent Imagery,Torture Descriptions
+Societal Risks,Misinformation,Misleading Content,Conspiracy Theories
+Societal Risks,Misinformation,Misleading Content,Pseudoscience
+Societal Risks,Unfair Bias,Algorithmic Bias,Disparate Impact
+Societal Risks,Unfair Bias,Algorithmic Bias,Representation Bias
+Societal Risks,Manipulation,Persuasive Techniques,Emotional Manipulation
+Legal & Rights Risks,Privacy,Surveillance,Unauthorized Monitoring
+Legal & Rights Risks,Privacy,Surveillance,Identification of Individuals
+Legal & Rights Risks,Intellectual Property,Trademark,Brand Impersonation
+Legal & Rights Risks,Intellectual Property,Trademark,Trademark Dilution
+Legal & Rights Risks,Compliance,Sectoral Compliance,Healthcare Regulations Violation

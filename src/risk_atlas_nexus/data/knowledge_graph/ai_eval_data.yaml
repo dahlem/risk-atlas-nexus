@@ -1,34 +1,63 @@
 documents:
-  - id: arxiv.org/2310.12941
-    name: "The Foundation Model Transparency Index"
-    description: "To assess the transparency of the foundation model ecosystem and help improve transparency over time, we introduce the Foundation Model Transparency Index. The Foundation Model Transparency Index specifies 100 fine-grained indicators that comprehensively codify transparency for foundation models, spanning the upstream resources used to build a foundation model (e.g data, labor, compute), details about the model itself (e.g. size, capabilities, risks), and the downstream use (e.g. distribution channels, usage policies, affected geographies). We score 10 major foundation model developers (e.g. OpenAI, Google, Meta) against the 100 indicators to assess their transparency. To facilitate and standardize assessment, we score developers in relation to their practices for their flagship foundation model (e.g. GPT-4 for OpenAI, PaLM 2 for Google, Llama 2 for Meta)."
-    url: "https://arxiv.org/abs/2310.12941"
-    dateCreated: "2023-10-19"
-    dateModified: "2023-10-19"
-  - id: arxiv.org/2109.07958
-    name: "TruthfulQA: Measuring How Models Mimic Human Falsehoods"
-    description: "TruthfulQA is a benchmark to measure whether a language model is truthful in generating answers to questions. The benchmark comprises 817 questions that span 38 categories, including health, law, finance and politics. Questions are crafted so that some humans would answer falsely due to a false belief or misconception. To perform well, models must avoid generating false answers learned from imitating human texts."
-    url: "https://arxiv.org/abs/2109.07958"
-    dateCreated: "2021-09-08"
-    dateModified: "2022-05-08"
+- id: arxiv.org/2310.12941
+  name: The Foundation Model Transparency Index
+  description: To assess the transparency of the foundation model ecosystem and help
+    improve transparency over time, we introduce the Foundation Model Transparency
+    Index. The Foundation Model Transparency Index specifies 100 fine-grained indicators
+    that comprehensively codify transparency for foundation models, spanning the upstream
+    resources used to build a foundation model (e.g data, labor, compute), details
+    about the model itself (e.g. size, capabilities, risks), and the downstream use
+    (e.g. distribution channels, usage policies, affected geographies). We score 10
+    major foundation model developers (e.g. OpenAI, Google, Meta) against the 100
+    indicators to assess their transparency. To facilitate and standardize assessment,
+    we score developers in relation to their practices for their flagship foundation
+    model (e.g. GPT-4 for OpenAI, PaLM 2 for Google, Llama 2 for Meta).
+  url: https://arxiv.org/abs/2310.12941
+  dateCreated: '2023-10-19'
+  dateModified: '2023-10-19'
+- id: arxiv.org/2109.07958
+  name: 'TruthfulQA: Measuring How Models Mimic Human Falsehoods'
+  description: TruthfulQA is a benchmark to measure whether a language model is truthful
+    in generating answers to questions. The benchmark comprises 817 questions that
+    span 38 categories, including health, law, finance and politics. Questions are
+    crafted so that some humans would answer falsely due to a false belief or misconception.
+    To perform well, models must avoid generating false answers learned from imitating
+    human texts.
+  url: https://arxiv.org/abs/2109.07958
+  dateCreated: '2021-09-08'
+  dateModified: '2022-05-08'
 datasets:
-  - id: truthfulqa/truthful_qa
-    name: "truthful_qa"
-    description: "TruthfulQA is a benchmark to measure whether a language model is truthful in generating answers to questions. The benchmark comprises 817 questions that span 38 categories, including health, law, finance and politics. Questions are crafted so that some humans would answer falsely due to a false belief or misconception. To perform well, models must avoid generating false answers learned from imitating human texts."
-    url: "https://huggingface.co/datasets/truthfulqa/truthful_qa"
-    hasLicense: license-apache-2.0
+- id: truthfulqa/truthful_qa
+  name: truthful_qa
+  description: TruthfulQA is a benchmark to measure whether a language model is truthful
+    in generating answers to questions. The benchmark comprises 817 questions that
+    span 38 categories, including health, law, finance and politics. Questions are
+    crafted so that some humans would answer falsely due to a false belief or misconception.
+    To perform well, models must avoid generating false answers learned from imitating
+    human texts.
+  url: https://huggingface.co/datasets/truthfulqa/truthful_qa
+  hasLicense: license-apache-2.0
 evaluations:
-  - id: stanford-fmti
-    name: "The Foundation Model Transparency Index"
-    description: "The Foundation Model Transparency Index is an ongoing initiative to comprehensively assess the transparency of foundation model developers."
-    url: "https://crfm.stanford.edu/fmti/"
-    hasDocumentation: ["arxiv.org/2310.12941"]
-    hasRelatedRisk: ["atlas-lack-of-model-transparency", "atlas-data-transparency", "atlas-data-provenance"]
-  - id: cards.value_alignment.hallucinations.truthfulqa
-    name: "TruthfulQA"
-    description: "TruthfulQA is a benchmark to measure whether a language model is truthful in generating answers to questions."
-    url: https://github.com/sylinrl/TruthfulQA
-    hasUnitxtCard: cards.value_alignment.hallucinations.truthfulqa
-    hasRelatedRisk: ["atlas-hallucination"]
-    hasDocumentation: ["arxiv.org/2109.07958"]
-    hasDataset: ["truthfulqa/truthful_qa"]
+- id: stanford-fmti
+  name: The Foundation Model Transparency Index
+  description: The Foundation Model Transparency Index is an ongoing initiative to
+    comprehensively assess the transparency of foundation model developers.
+  url: https://crfm.stanford.edu/fmti/
+  hasDocumentation:
+  - arxiv.org/2310.12941
+  hasRelatedRisk:
+  - atlas-lack-of-model-transparency
+  - atlas-data-transparency
+  - atlas-data-provenance
+- id: cards.value_alignment.hallucinations.truthfulqa
+  name: TruthfulQA
+  description: TruthfulQA is a benchmark to measure whether a language model is truthful
+    in generating answers to questions.
+  url: https://github.com/sylinrl/TruthfulQA
+  hasUnitxtCard: cards.value_alignment.hallucinations.truthfulqa
+  hasRelatedRisk:
+  - atlas-hallucination
+  hasDocumentation:
+  - arxiv.org/2109.07958
+  hasDataset:
+  - truthfulqa/truthful_qa

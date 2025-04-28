@@ -1,7 +1,19 @@
 documents:
-- id: "granite-guardian-paper"
-  name: 'Granite Guardian'
-  description: 'We introduce the Granite Guardian models, a suite of safeguards designed to provide risk detection for prompts and responses, enabling safe and responsible use in combination with any large language model (LLM). These models offer comprehensive coverage across multiple risk dimensions, including social bias, profanity, violence, sexual content, unethical behavior, jailbreaking, and hallucination-related risks such as context relevance, groundedness, and answer relevance for retrieval-augmented generation (RAG). Trained on a unique dataset combining human annotations from diverse sources and synthetic data, Granite Guardian models address risks typically overlooked by traditional risk detection models, such as jailbreaks and RAG-specific issues. With AUC scores of 0.871 and 0.854 on harmful content and RAG-hallucination-related benchmarks respectively, Granite Guardian is the most generalizable and competitive model available in the space. Released as open-source, Granite Guardian aims to promote responsible AI development across the community.'
+- id: granite-guardian-paper
+  name: Granite Guardian
+  description: We introduce the Granite Guardian models, a suite of safeguards designed
+    to provide risk detection for prompts and responses, enabling safe and responsible
+    use in combination with any large language model (LLM). These models offer comprehensive
+    coverage across multiple risk dimensions, including social bias, profanity, violence,
+    sexual content, unethical behavior, jailbreaking, and hallucination-related risks
+    such as context relevance, groundedness, and answer relevance for retrieval-augmented
+    generation (RAG). Trained on a unique dataset combining human annotations from
+    diverse sources and synthetic data, Granite Guardian models address risks typically
+    overlooked by traditional risk detection models, such as jailbreaks and RAG-specific
+    issues. With AUC scores of 0.871 and 0.854 on harmful content and RAG-hallucination-related
+    benchmarks respectively, Granite Guardian is the most generalizable and competitive
+    model available in the space. Released as open-source, Granite Guardian aims to
+    promote responsible AI development across the community.
   url: https://arxiv.org/abs/2412.07724
 taxonomies:
 - id: ibm-granite-guardian
@@ -27,7 +39,10 @@ riskgroups:
 risks:
 - id: granite-guardian-harm
   name: Harm
-  description: "Content considered universally harmful. This is our general category, which should encompass a variety of risks including those not specifically addressed by the following categories: Social Bias, Profanity, Sexual Content, Unethical Behavior, Violence, Jailbreaking, Groundedness, Answer Relevance, Context Relevance."
+  description: 'Content considered universally harmful. This is our general category,
+    which should encompass a variety of risks including those not specifically addressed
+    by the following categories: Social Bias, Profanity, Sexual Content, Unethical
+    Behavior, Violence, Jailbreaking, Groundedness, Answer Relevance, Context Relevance.'
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -47,7 +62,9 @@ risks:
   - granite-evasiveness
 - id: granite-social-bias
   name: Social Bias
-  description: Systemic prejudice against groups based on shared identity or characteristics, often stemming from stereotypes or cultural influences. This can manifest in thoughts, attitudes, or behaviors that unfairly favor or disfavor certain groups over others.
+  description: Systemic prejudice against groups based on shared identity or characteristics,
+    often stemming from stereotypes or cultural influences. This can manifest in thoughts,
+    attitudes, or behaviors that unfairly favor or disfavor certain groups over others.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -60,7 +77,9 @@ risks:
   - granite-guardian-harm
 - id: granite-profanity
   name: Profanity
-  description: Use of language considered offensive or socially unacceptable in a given context. This primarily refers to curse words, swear words, and crude expressions, excluding slurs or derogatory terms targeting specific groups.
+  description: Use of language considered offensive or socially unacceptable in a
+    given context. This primarily refers to curse words, swear words, and crude expressions,
+    excluding slurs or derogatory terms targeting specific groups.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -73,7 +92,12 @@ risks:
   - granite-guardian-harm
 - id: granite-sexual-content
   name: Sexual Content
-  description: Material explicitly related to sexual activities, anatomy, or desires. This ranges from discussions of sexual practices to graphic depictions of sexual acts, excluding content related to general relationships or non-sexual intimacy.Material explicitly related to sexual activities, anatomy, or desires. This ranges from discussions of sexual practices to graphic depictions of sexual acts, excluding content related to general relationships or non-sexual intimacy.
+  description: Material explicitly related to sexual activities, anatomy, or desires.
+    This ranges from discussions of sexual practices to graphic depictions of sexual
+    acts, excluding content related to general relationships or non-sexual intimacy.Material
+    explicitly related to sexual activities, anatomy, or desires. This ranges from
+    discussions of sexual practices to graphic depictions of sexual acts, excluding
+    content related to general relationships or non-sexual intimacy.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -86,7 +110,10 @@ risks:
   - granite-guardian-harm
 - id: granite-unethical-behavior
   name: Unethical Behavior
-  description: Actions that violate moral or professional standards, focusing on exploitation for personal gain or disregard for others' well-being. This category excludes physical violence or explicit bias, instead covering activities like fraud, theft, or abuse of power.
+  description: Actions that violate moral or professional standards, focusing on exploitation
+    for personal gain or disregard for others' well-being. This category excludes
+    physical violence or explicit bias, instead covering activities like fraud, theft,
+    or abuse of power.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -99,7 +126,9 @@ risks:
   - granite-guardian-harm
 - id: granite-violence
   name: Violence
-  description: Promoting or describing physical harm to individuals or groups. This includes depictions of assault, self-harm, or creation of a hostile environment through threats or intimidation.
+  description: Promoting or describing physical harm to individuals or groups. This
+    includes depictions of assault, self-harm, or creation of a hostile environment
+    through threats or intimidation.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -112,7 +141,9 @@ risks:
   - granite-guardian-harm
 - id: granite-jailbreak
   name: Jailbreaking
-  description: Deliberate circumvention of AI systems' built-in safeguards or ethical guidelines. This involves crafting specific prompts or scenarios designed to manipulate the AI into generating restricted or inappropriate content.
+  description: Deliberate circumvention of AI systems' built-in safeguards or ethical
+    guidelines. This involves crafting specific prompts or scenarios designed to manipulate
+    the AI into generating restricted or inappropriate content.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -125,7 +156,12 @@ risks:
   - granite-guardian-harm
 - id: granite-harm-engagement
   name: Harm Engagement
-  description: An engagement or endorsement with any requests that are harmful or unethical. This includes scenarios where the user or assistant messages reflects an engagement with any requests that are harmful, e.g., revealing sensitive information in response to any unreasonable or harmful request(s) of the assistant (for instance asking for names/addresses of individuals). Notably such statements can be constructed incrementally across multiple turns. 
+  description: An engagement or endorsement with any requests that are harmful or
+    unethical. This includes scenarios where the user or assistant messages reflects
+    an engagement with any requests that are harmful, e.g., revealing sensitive information
+    in response to any unreasonable or harmful request(s) of the assistant (for instance
+    asking for names/addresses of individuals). Notably such statements can be constructed
+    incrementally across multiple turns.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2025-02-26
   dateModified: 2025-02-26
@@ -138,7 +174,10 @@ risks:
   - granite-guardian-harm
 - id: granite-evasiveness
   name: Evasiveness
-  description: Avoiding to engage without providing sufficient reason. This includes scenarios where the assistant avoids engaging with certain topics or subjects without providing sufficient reason, or the user ignores or fails to acknowledge any pertinent advice or feedback from the assistant without providing an explanation.
+  description: Avoiding to engage without providing sufficient reason. This includes
+    scenarios where the assistant avoids engaging with certain topics or subjects
+    without providing sufficient reason, or the user ignores or fails to acknowledge
+    any pertinent advice or feedback from the assistant without providing an explanation.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2025-02-26
   dateModified: 2025-02-26
@@ -151,7 +190,11 @@ risks:
   - granite-guardian-harm
 - id: granite-groundedness
   name: Groundedness
-  description: This risk arises in a Retrieval-Augmented Generation (RAG) system when the LLM response includes claims, facts, or details that are not supported by or directly contradicted by the given context. An ungrounded answer may involve fabricating information, misinterpreting the context, or making unsupported extrapolations beyond what the context actually states.
+  description: This risk arises in a Retrieval-Augmented Generation (RAG) system when
+    the LLM response includes claims, facts, or details that are not supported by
+    or directly contradicted by the given context. An ungrounded answer may involve
+    fabricating information, misinterpreting the context, or making unsupported extrapolations
+    beyond what the context actually states.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -162,7 +205,10 @@ risks:
   - atlas-hallucination
 - id: granite-relevance
   name: Context Relevance
-  description: This occurs in when the retrieved or provided context fails to contain information pertinent to answering the user's question or addressing their needs. Irrelevant context may be on a different topic, from an unrelated domain, or contain information that doesn't help in formulating an appropriate response to the user.
+  description: This occurs in when the retrieved or provided context fails to contain
+    information pertinent to answering the user's question or addressing their needs.
+    Irrelevant context may be on a different topic, from an unrelated domain, or contain
+    information that doesn't help in formulating an appropriate response to the user.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -173,7 +219,11 @@ risks:
   - atlas-hallucination
 - id: granite-answer-relevance
   name: Answer Relevance
-  description: This occurs when the LLM response fails to address or properly respond to the user's input. This includes providing off-topic information, misinterpreting the query, or omitting crucial details requested by the User. An irrelevant answer may contain factually correct information but still fail to meet the User's specific needs or answer their intended question.
+  description: This occurs when the LLM response fails to address or properly respond
+    to the user's input. This includes providing off-topic information, misinterpreting
+    the query, or omitting crucial details requested by the User. An irrelevant answer
+    may contain factually correct information but still fail to meet the User's specific
+    needs or answer their intended question.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
@@ -184,19 +234,22 @@ risks:
   - atlas-hallucination
 - id: granite-function-call
   name: Function Calling Hallucination
-  description: This occurs when the LLM response contains function calls that have syntax or semantic errors based on the user query and available tool definition. For instance, if an AI agent purportedly queries an external information source, this capability monitors for fabricated information flows.
+  description: This occurs when the LLM response contains function calls that have
+    syntax or semantic errors based on the user query and available tool definition.
+    For instance, if an AI agent purportedly queries an external information source,
+    this capability monitors for fabricated information flows.
   url: https://www.ibm.com/granite/docs/models/guardian/#risk-definitions
   dateCreated: 2024-12-10
   dateModified: 2024-12-10
   isDefinedByTaxonomy: ibm-granite-guardian
-  isDetectedBy: 
+  isDetectedBy:
   - gg-function-call-detection
   isPartOf: granite-guardian-agentic-safety-group
   tag: function-call
   relatedMatch:
   - atlas-hallucination
 - id: atlas-harmful-output
-  relatedMatch: 
+  relatedMatch:
   - granite-guardian-harm
   - granite-sexual-content
   - granite-unethical-behavior
@@ -210,7 +263,7 @@ risks:
   relatedMatch:
   - granite-profanity
 - id: atlas-jailbreaking
-  relatedMatch: 
+  relatedMatch:
   - granite-jailbreak
 - id: atlas-hallucination
   relatedMatch:
@@ -221,12 +274,12 @@ risks:
 riskcontrols:
 - id: gg-harm-detection
   name: Harm detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-guardian-harm
-  isDefinedByTaxonomy: ibm-granite-guardian 
+  isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-social-bias-detection
   name: Social Bias detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-social-bias
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-profanity-detection
@@ -241,7 +294,7 @@ riskcontrols:
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-unethical-behavior-detection
   name: Unethical Behavior detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-unethical-behavior
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-violence-detection
@@ -251,17 +304,17 @@ riskcontrols:
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-jailbreak-detection
   name: Jailbreaking detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-jailbreak
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-harm-engagement-detection
   name: Harm engagement detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-harm-engagement
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-evasiveness-detection
   name: Evasiveness detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-evasiveness
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-groundedness-detection
@@ -271,16 +324,16 @@ riskcontrols:
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-relevance-detection
   name: Context Relevance detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-relevance
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-answer-relevance-detection
   name: Answer Relevance detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-answer-relevance
   isDefinedByTaxonomy: ibm-granite-guardian
 - id: gg-function-call-detection
   name: Function Calling Hallucination detection
-  detectsRiskConcept: 
+  detectsRiskConcept:
   - granite-function-call
   isDefinedByTaxonomy: ibm-granite-guardian

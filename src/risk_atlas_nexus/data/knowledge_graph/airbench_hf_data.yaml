@@ -1,0 +1,2701 @@
+documents:
+- id: arxiv.org/abs/2407.17436
+  name: 'AIR-Bench: A Regulation-Aligned Safety Benchmark for Responsible AI Development'
+  description: AIR-Bench is the first AI safety benchmark aligned with emerging government
+    regulations and company policies. It features a four-tiered safety taxonomy with
+    314 granular risk categories derived from analyzing 8 government regulations and
+    16 company policies.
+  url: https://arxiv.org/abs/2407.17436
+  dateCreated: '2024-07-29'
+  dateModified: '2024-07-29'
+taxonomies:
+- id: airbench-hf
+  name: AIR-Bench Taxonomy (HuggingFace)
+  description: A four-tiered safety taxonomy with 314 granular risk categories derived
+    from analyzing 8 government regulations and 16 company policies.
+  url: https://arxiv.org/abs/2407.17436
+  dateCreated: '2024-07-29'
+  version: '1.0'
+  hasDocumentation:
+  - arxiv.org/abs/2407.17436
+riskgroups:
+- id: airbench-hf-1
+  name: System & Operational Risks
+  description: System & Operational Risks - A top level category in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  narrowMatch:
+  - airbench-hf-security-risks
+- id: airbench-hf-2
+  name: Content Safety Risks
+  description: Content Safety Risks - A top level category in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  narrowMatch:
+  - airbench-hf-operational-misuses
+- id: airbench-hf-3
+  name: Societal Risks
+  description: Societal Risks - A top level category in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  narrowMatch:
+  - airbench-hf-violence-extremism
+- id: airbench-hf-4
+  name: Legal & Rights Risks
+  description: Legal & Rights Risks - A top level category in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  narrowMatch:
+  - airbench-hf-hate/toxicity
+- id: airbench-hf-security-risks
+  name: Security Risks
+  description: Security Risks - A subcategory of System & Operational Risks in the
+    AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-1
+  narrowMatch:
+  - airbench-hf-confidentiality
+  - airbench-hf-integrity
+  - airbench-hf-availability
+- id: airbench-hf-confidentiality
+  name: Confidentiality
+  description: Confidentiality - A subcategory of Security Risks in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-security-risks
+  narrowMatch:
+  - airbench-hf-network-intrusion
+  - airbench-hf-vulnerability-probing
+  - airbench-hf-spoofing
+  - airbench-hf-spear-phishing
+  - airbench-hf-social-engineering
+  - airbench-hf-unauthorized-network-entry
+- id: airbench-hf-integrity
+  name: Integrity
+  description: Integrity - A subcategory of Security Risks in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-security-risks
+  narrowMatch:
+  - airbench-hf-control-override-(safety/privacy-filters)
+  - airbench-hf-malware
+  - airbench-hf-packet-forgery
+  - airbench-hf-data-tampering
+- id: airbench-hf-availability
+  name: Availability
+  description: Availability - A subcategory of Security Risks in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-security-risks
+  narrowMatch:
+  - airbench-hf-system/website-impairment
+  - airbench-hf-network-disruption
+- id: airbench-hf-deception
+  name: Deception
+  description: Deception - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-fraud
+  - airbench-hf-academic-dishonesty
+  - airbench-hf-mis/disinformation
+- id: airbench-hf-fraud
+  name: Fraud
+  description: Fraud - A subcategory of Deception in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-deception
+  narrowMatch:
+  - airbench-hf-spam
+  - airbench-hf-scams
+  - airbench-hf-phishing/catfishing
+  - airbench-hf-pseudo-pharmaceuticals
+  - airbench-hf-impersonating-others
+- id: airbench-hf-academic-dishonesty
+  name: Academic dishonesty
+  description: Academic dishonesty - A subcategory of Deception in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-deception
+  narrowMatch:
+  - airbench-hf-plagiarism
+  - airbench-hf-promoting-academic-dishonesty
+- id: airbench-hf-mis/disinformation
+  name: Mis/disinformation
+  description: Mis/disinformation - A subcategory of Deception in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-deception
+  narrowMatch:
+  - airbench-hf-generating-or-promoting-misinformation
+  - airbench-hf-fake-online-engagement-(fake-reviews,-fake-grassroots-support)
+- id: airbench-hf-manipulation
+  name: Manipulation
+  description: Manipulation - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-sowing-division
+  - airbench-hf-misrepresentation
+- id: airbench-hf-sowing-division
+  name: Sowing Division
+  description: Sowing Division - A subcategory of Manipulation in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-manipulation
+  narrowMatch:
+  - airbench-hf-contents-aim-to-turn-a-community-against-itself.
+  - airbench-hf-content-to-divert-attention-from-harmful-actions
+- id: airbench-hf-misrepresentation
+  name: Misrepresentation
+  description: Misrepresentation - A subcategory of Manipulation in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-manipulation
+  narrowMatch:
+  - airbench-hf-automated-social-media-posts
+  - airbench-hf-not-labeling-content-as-ai-generated-(using-chatbots-to-convince-people-they-are-communicating-with-a-human)
+  - airbench-hf-impersonating-humans
+- id: airbench-hf-defamation
+  name: Defamation
+  description: Defamation - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-types-of-defamation
+- id: airbench-hf-types-of-defamation
+  name: Types of Defamation
+  description: Types of Defamation - A subcategory of Defamation in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-defamation
+  narrowMatch:
+  - airbench-hf-disparagement
+  - airbench-hf-libel
+  - airbench-hf-slander
+- id: airbench-hf-fundamental-rights
+  name: Fundamental Rights
+  description: Fundamental Rights - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-specific-types-of-rights
+- id: airbench-hf-specific-types-of-rights
+  name: Specific Types of Rights
+  description: Specific Types of Rights - A subcategory of Fundamental Rights in the
+    AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-fundamental-rights
+  narrowMatch:
+  - airbench-hf-ip-rights/-trade-secrets
+  - airbench-hf-portrait-rights
+  - airbench-hf-reputation-rights
+  - airbench-hf-honor-rights
+  - airbench-hf-name-rights
+- id: airbench-hf-discrimination/bias
+  name: Discrimination/Bias
+  description: Discrimination/Bias - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination/protected-characteristics-combinations
+  name: Discrimination/Protected Characteristics Combinations
+  description: Discrimination/Protected Characteristics Combinations - A subcategory
+    of Discrimination/Bias in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-discrimination/bias
+  narrowMatch:
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---race
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---caste
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---social-behaviors
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---physical-characteristics
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---mental-characteristics
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---predicted-personality
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---health-conditions
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---disability
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---pregnancy-status
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---genetic-information
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---occupation
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---ethnicity
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---age
+  - airbench-hf-characterization-of-identity---race
+  - airbench-hf-characterization-of-identity---ethnicity
+  - airbench-hf-characterization-of-identity---color
+  - airbench-hf-characterization-of-identity---gender
+  - airbench-hf-characterization-of-identity---sexual-orientation
+  - airbench-hf-characterization-of-identity---religion
+  - airbench-hf-characterization-of-identity---beliefs
+  - airbench-hf-characterization-of-identity---nationality
+  - airbench-hf-characterization-of-identity---geographic-region
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---color
+  - airbench-hf-characterization-of-identity---caste
+  - airbench-hf-characterization-of-identity---social-behaviors
+  - airbench-hf-characterization-of-identity---physical-characteristics
+  - airbench-hf-characterization-of-identity---mental-characteristics
+  - airbench-hf-characterization-of-identity---predicted-personality
+  - airbench-hf-characterization-of-identity---health-conditions
+  - airbench-hf-characterization-of-identity---disability
+  - airbench-hf-characterization-of-identity---pregnancy-status
+  - airbench-hf-characterization-of-identity---genetic-information
+  - airbench-hf-characterization-of-identity---occupation
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---gender
+  - airbench-hf-characterization-of-identity---age
+  - airbench-hf-classification-of-individuals---race
+  - airbench-hf-classification-of-individuals---ethnicity
+  - airbench-hf-classification-of-individuals---color
+  - airbench-hf-classification-of-individuals---gender
+  - airbench-hf-classification-of-individuals---sexual-orientation
+  - airbench-hf-classification-of-individuals---religion
+  - airbench-hf-classification-of-individuals---beliefs
+  - airbench-hf-classification-of-individuals---nationality
+  - airbench-hf-classification-of-individuals---geographic-region
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---sexual-orientation
+  - airbench-hf-classification-of-individuals---caste
+  - airbench-hf-classification-of-individuals---social-behaviors
+  - airbench-hf-classification-of-individuals---physical-characteristics
+  - airbench-hf-classification-of-individuals---mental-characteristics
+  - airbench-hf-classification-of-individuals---predicted-personality
+  - airbench-hf-classification-of-individuals---health-conditions
+  - airbench-hf-classification-of-individuals---disability
+  - airbench-hf-classification-of-individuals---pregnancy-status
+  - airbench-hf-classification-of-individuals---genetic-information
+  - airbench-hf-classification-of-individuals---occupation
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---religion
+  - airbench-hf-classification-of-individuals---age
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---beliefs
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---nationality
+  - airbench-hf-discrimination-in-employment,-benefits,-or-services---geographic-region
+- id: airbench-hf-privacy
+  name: Privacy
+  description: Privacy - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-privacy-violations/sensitive-data-combinations
+  name: Privacy Violations/Sensitive Data Combinations
+  description: Privacy Violations/Sensitive Data Combinations - A subcategory of Privacy
+    in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-privacy
+  narrowMatch:
+  - airbench-hf-unauthorized-generation---pii-(personal-identifiable-information)
+  - airbench-hf-unauthorized-disclosure---pii-(personal-identifiable-information)
+  - airbench-hf-unauthorized-disclosure---health-data
+  - airbench-hf-unauthorized-disclosure---location-data
+  - airbench-hf-unauthorized-disclosure---demographic-data
+  - airbench-hf-unauthorized-disclosure---biometric-data-(facial-recognition)
+  - airbench-hf-unauthorized-disclosure---educational-records
+  - airbench-hf-unauthorized-disclosure---financial-records
+  - airbench-hf-unauthorized-disclosure---behavioral/-preference-data
+  - airbench-hf-unauthorized-disclosure---communication-records
+  - airbench-hf-unauthorized-distribution---pii-(personal-identifiable-information)
+  - airbench-hf-unauthorized-generation---health-data
+  - airbench-hf-unauthorized-distribution---health-data
+  - airbench-hf-unauthorized-distribution---location-data
+  - airbench-hf-unauthorized-distribution---demographic-data
+  - airbench-hf-unauthorized-distribution---biometric-data-(facial-recognition)
+  - airbench-hf-unauthorized-distribution---educational-records
+  - airbench-hf-unauthorized-distribution---financial-records
+  - airbench-hf-unauthorized-distribution---behavioral/-preference-data
+  - airbench-hf-unauthorized-distribution---communication-records
+  - airbench-hf-unauthorized-collection/gathering/stealing---pii-(personal-identifiable-information)
+  - airbench-hf-unauthorized-collection/gathering/stealing---health-data
+  - airbench-hf-unauthorized-generation---location-data
+  - airbench-hf-unauthorized-collection/gathering/stealing---location-data
+  - airbench-hf-unauthorized-collection/gathering/stealing---demographic-data
+  - airbench-hf-unauthorized-collection/gathering/stealing---biometric-data-(facial-recognition)
+  - airbench-hf-unauthorized-collection/gathering/stealing---educational-records
+  - airbench-hf-unauthorized-collection/gathering/stealing---financial-records
+  - airbench-hf-unauthorized-collection/gathering/stealing---behavioral/-preference-data
+  - airbench-hf-unauthorized-collection/gathering/stealing---communication-records
+  - airbench-hf-unauthorized-processing---pii-(personal-identifiable-information)
+  - airbench-hf-unauthorized-processing---health-data
+  - airbench-hf-unauthorized-processing---location-data
+  - airbench-hf-unauthorized-generation---demographic-data
+  - airbench-hf-unauthorized-processing---demographic-data
+  - airbench-hf-unauthorized-processing---biometric-data-(facial-recognition)
+  - airbench-hf-unauthorized-processing---educational-records
+  - airbench-hf-unauthorized-processing---financial-records
+  - airbench-hf-unauthorized-processing---behavioral/-preference-data
+  - airbench-hf-unauthorized-processing---communication-records
+  - airbench-hf-unauthorized-inference/synthesis---pii-(personal-identifiable-information)
+  - airbench-hf-unauthorized-inference/synthesis---health-data
+  - airbench-hf-unauthorized-inference/synthesis---location-data
+  - airbench-hf-unauthorized-inference/synthesis---demographic-data
+  - airbench-hf-unauthorized-generation---biometric-data-(facial-recognition)
+  - airbench-hf-unauthorized-inference/synthesis---biometric-data-(facial-recognition)
+  - airbench-hf-unauthorized-inference/synthesis---educational-records
+  - airbench-hf-unauthorized-inference/synthesis---financial-records
+  - airbench-hf-unauthorized-inference/synthesis---behavioral/-preference-data
+  - airbench-hf-unauthorized-inference/synthesis---communication-records
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---pii-(personal-identifiable-information)
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---health-data
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---location-data
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---demographic-data
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---biometric-data-(facial-recognition)
+  - airbench-hf-unauthorized-generation---educational-records
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---educational-records
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---financial-records
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---behavioral/-preference-data
+  - airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---communication-records
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---pii-(personal-identifiable-information)
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---health-data
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---location-data
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---demographic-data
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---biometric-data-(facial-recognition)
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---educational-records
+  - airbench-hf-unauthorized-generation---financial-records
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---financial-records
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---behavioral/-preference-data
+  - airbench-hf-model-attacks-(membership-inference,-model-inversion)---communication-records
+  - airbench-hf-unauthorized-generation---behavioral/-preference-data
+  - airbench-hf-unauthorized-generation---communication-records
+- id: airbench-hf-criminal-activities
+  name: Criminal Activities
+  description: Criminal Activities - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-illegal/regulated-substances/goods
+  - airbench-hf-services/exploitation
+  - airbench-hf-other-illegal/unlawful/criminal-activities
+- id: airbench-hf-illegal/regulated-substances/goods
+  name: Illegal/Regulated substances/goods
+  description: Illegal/Regulated substances/goods - A subcategory of Criminal Activities
+    in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-criminal-activities
+  narrowMatch:
+  - airbench-hf-drugs
+- id: airbench-hf-services/exploitation
+  name: services/exploitation
+  description: services/exploitation - A subcategory of Criminal Activities in the
+    AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-criminal-activities
+  narrowMatch:
+  - airbench-hf-human-trafficking
+  - airbench-hf-sexual-exploitation
+  - airbench-hf-prostitution
+- id: airbench-hf-other-illegal/unlawful/criminal-activities
+  name: Other Illegal/Unlawful/Criminal Activities
+  description: Other Illegal/Unlawful/Criminal Activities - A subcategory of Criminal
+    Activities in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-criminal-activities
+  narrowMatch:
+  - airbench-hf-involvement-in-data-adversarially-adversely-affects-national-security-or-public-interests
+  - airbench-hf-undermining-social-stability-(china-unique)
+  - airbench-hf-undermining-international-relations-(china-unique)
+  - airbench-hf-content-abetting/involving/furthering-activities-violating-any-applicable-law
+- id: airbench-hf-operational-misuses
+  name: Operational Misuses
+  description: Operational Misuses - A subcategory of Content Safety Risks in the
+    AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-2
+  narrowMatch:
+  - airbench-hf-automated-decision-making
+  - airbench-hf-autonomous-unsafe-operation-of-systems
+  - airbench-hf-advice-in-heavily-regulated-industries
+- id: airbench-hf-automated-decision-making
+  name: Automated Decision-Making
+  description: Automated Decision-Making - A subcategory of Operational Misuses in
+    the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-operational-misuses
+  narrowMatch:
+  - airbench-hf-financing-eligibility/creditworthiness
+  - airbench-hf-profiling
+  - airbench-hf-criminal-justice/predictive-policing
+  - airbench-hf-adversely-affects-legal-rights
+  - airbench-hf-employment
+  - airbench-hf-social-scoring
+  - airbench-hf-housing-eligibility
+  - airbench-hf-education-eligibility
+  - airbench-hf-migration-eligibility
+  - airbench-hf-insurance-eligibility
+- id: airbench-hf-autonomous-unsafe-operation-of-systems
+  name: Autonomous Unsafe Operation of Systems
+  description: Autonomous Unsafe Operation of Systems - A subcategory of Operational
+    Misuses in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-operational-misuses
+  narrowMatch:
+  - airbench-hf-heavy-machinery
+  - airbench-hf-transportation
+  - airbench-hf-energy/electrical-grids
+  - airbench-hf-nuclear-facilities
+  - airbench-hf-aircraft-navigation/air-traffic-control
+  - airbench-hf-communication-systems
+  - airbench-hf-water-treatment-facilities
+  - airbench-hf-life-support
+  - airbench-hf-weapon-systems/battlefield-management
+  - airbench-hf-emergency-services
+  - airbench-hf-other-unauthorized-actions-on-behalf-of-users
+- id: airbench-hf-advice-in-heavily-regulated-industries
+  name: Advice in Heavily Regulated Industries
+  description: Advice in Heavily Regulated Industries - A subcategory of Operational
+    Misuses in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-operational-misuses
+  narrowMatch:
+  - airbench-hf-legal
+  - airbench-hf-medical/pharmaceutical
+  - airbench-hf-accounting
+  - airbench-hf-financial
+  - airbench-hf-government-services
+- id: airbench-hf-violence-extremism
+  name: Violence & Extremism
+  description: Violence & Extremism - A subcategory of Societal Risks in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-3
+  narrowMatch:
+  - airbench-hf-depicting-violence
+  - airbench-hf-weapon-usage-development
+  - airbench-hf-military-and-warfare
+  - airbench-hf-supporting-malicious-organized-groups
+  - airbench-hf-celebrating-suffering
+  - airbench-hf-violent-acts
+- id: airbench-hf-depicting-violence
+  name: Depicting Violence
+  description: Depicting Violence - A subcategory of Violence & Extremism in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-violence-extremism
+  narrowMatch:
+  - airbench-hf-bodily-destruction
+  - airbench-hf-bodily-mutilation
+  - airbench-hf-torture/abuse
+  - airbench-hf-animal-abuse
+  - airbench-hf-activities-meant-to-kill
+- id: airbench-hf-weapon-usage-development
+  name: Weapon Usage & Development
+  description: Weapon Usage & Development - A subcategory of Violence & Extremism
+    in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-violence-extremism
+  narrowMatch:
+  - airbench-hf-guns
+  - airbench-hf-explosives/dangerous-materials
+  - airbench-hf-bioweapons/viruses/gain-of-function
+  - airbench-hf-nuclear-weapons
+  - airbench-hf-chemical-weapons
+  - airbench-hf-radiological-weapons
+- id: airbench-hf-military-and-warfare
+  name: Military and Warfare
+  description: Military and Warfare - A subcategory of Violence & Extremism in the
+    AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-violence-extremism
+  narrowMatch:
+  - airbench-hf-military
+  - airbench-hf-warfare
+- id: airbench-hf-supporting-malicious-organized-groups
+  name: Supporting Malicious Organized Groups
+  description: Supporting Malicious Organized Groups - A subcategory of Violence &
+    Extremism in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-violence-extremism
+  narrowMatch:
+  - airbench-hf-extremism
+  - airbench-hf-terrorism
+  - airbench-hf-criminal-organization
+- id: airbench-hf-celebrating-suffering
+  name: Celebrating Suffering
+  description: Celebrating Suffering - A subcategory of Violence & Extremism in the
+    AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-violence-extremism
+  narrowMatch:
+  - airbench-hf-glorifying-violence,-abuse,-or-the-suffering-of-others
+  - airbench-hf-belittling-victimhood-or-violent-events
+  - airbench-hf-denying-or-minimizing-well-documented,-major-violent-events-or-the-victimhood-of-such-events/denying-the-deeds-of-martyrdom
+  - airbench-hf-beautifying-and-whitewashing-acts-of-war-or-aggression
+- id: airbench-hf-violent-acts
+  name: Violent acts
+  description: Violent acts - A subcategory of Violence & Extremism in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-violence-extremism
+  narrowMatch:
+  - airbench-hf-property-damage
+  - airbench-hf-environmental
+  - airbench-hf-persons-(including-murder)
+  - airbench-hf-animals
+- id: airbench-hf-hate/toxicity
+  name: Hate/Toxicity
+  description: Hate/Toxicity - A subcategory of Legal & Rights Risks in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-4
+  narrowMatch:
+  - airbench-hf-harassment
+  - airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+  - airbench-hf-perpetuating-harmful-beliefs
+  - airbench-hf-offensive-language
+- id: airbench-hf-harassment
+  name: Harassment
+  description: Harassment - A subcategory of Hate/Toxicity in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-hate/toxicity
+  narrowMatch:
+  - airbench-hf-bullying
+  - airbench-hf-doxing
+  - airbench-hf-cursing
+  - airbench-hf-threats
+  - airbench-hf-intimidation
+  - airbench-hf-shaming
+  - airbench-hf-humiliation
+  - airbench-hf-insults/personal-attacks
+  - airbench-hf-abuse
+  - airbench-hf-provoking
+  - airbench-hf-trolling
+- id: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+  name: Hate Speech (Inciting/Promoting/Expressing hatred)
+  description: Hate Speech (Inciting/Promoting/Expressing hatred) - A subcategory
+    of Hate/Toxicity in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-hate/toxicity
+  narrowMatch:
+  - airbench-hf-race
+  - airbench-hf-ethnicity
+  - airbench-hf-color
+  - airbench-hf-gender
+  - airbench-hf-sexual-orientation
+  - airbench-hf-religion
+  - airbench-hf-beliefs
+  - airbench-hf-nationality
+  - airbench-hf-geographic-region
+  - airbench-hf-caste
+  - airbench-hf-social-behaviors
+  - airbench-hf-physical-characteristics
+  - airbench-hf-mental-characteristics
+  - airbench-hf-personality
+  - airbench-hf-health-conditions
+  - airbench-hf-disability
+  - airbench-hf-pregnancy-status
+  - airbench-hf-genetic-information
+  - airbench-hf-occupation
+  - airbench-hf-age
+- id: airbench-hf-perpetuating-harmful-beliefs
+  name: Perpetuating Harmful Beliefs
+  description: Perpetuating Harmful Beliefs - A subcategory of Hate/Toxicity in the
+    AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-hate/toxicity
+  narrowMatch:
+  - airbench-hf-negative-stereotyping-of-any-group
+  - airbench-hf-perpetuating-racism
+  - airbench-hf-perpetuating-sexism
+- id: airbench-hf-offensive-language
+  name: Offensive Language
+  description: Offensive Language - A subcategory of Hate/Toxicity in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-hate/toxicity
+  narrowMatch:
+  - airbench-hf-vulgar-terms
+  - airbench-hf-derogatory-comments
+- id: airbench-hf-sexual-content
+  name: Sexual Content
+  description: Sexual Content - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-adult-content
+  - airbench-hf-erotic
+  - airbench-hf-non-consensual-nudity
+  - airbench-hf-monetized
+- id: airbench-hf-adult-content
+  name: Adult content
+  description: Adult content - A subcategory of Sexual Content in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-sexual-content
+  narrowMatch:
+  - airbench-hf-obscene
+  - airbench-hf-suggestive
+  - airbench-hf-sexual-acts
+  - airbench-hf-sexual-intercourse
+- id: airbench-hf-erotic
+  name: Erotic
+  description: Erotic - A subcategory of Sexual Content in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-sexual-content
+  narrowMatch:
+  - airbench-hf-erotic-chats
+  - airbench-hf-fetishes
+- id: airbench-hf-non-consensual-nudity
+  name: Non-Consensual Nudity
+  description: Non-Consensual Nudity - A subcategory of Sexual Content in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-sexual-content
+  narrowMatch:
+  - airbench-hf-ncii-(non-consensual-intimate-image)
+- id: airbench-hf-monetized
+  name: Monetized
+  description: Monetized - A subcategory of Sexual Content in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-sexual-content
+  narrowMatch:
+  - airbench-hf-pornography
+  - airbench-hf-promotion-of-sexual-services
+- id: airbench-hf-child-harm
+  name: Child Harm
+  description: Child Harm - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-endangerment,-harm,-or-abuse-of-children
+  - airbench-hf-child-sexual-abuse
+- id: airbench-hf-endangerment,-harm,-or-abuse-of-children
+  name: Endangerment, Harm, or Abuse of Children
+  description: Endangerment, Harm, or Abuse of Children - A subcategory of Child Harm
+    in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-child-harm
+  narrowMatch:
+  - airbench-hf-grooming
+  - airbench-hf-pedophilia
+  - airbench-hf-exploiting-or-harming-minors
+  - airbench-hf-building-services-targeting-minors/failure-to-employ-age-gating
+  - airbench-hf-building-services-to-present-a-persona-of-minor
+- id: airbench-hf-child-sexual-abuse
+  name: Child Sexual Abuse
+  description: Child Sexual Abuse - A subcategory of Child Harm in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-child-harm
+  narrowMatch:
+  - airbench-hf-solicitation
+  - airbench-hf-csam
+- id: airbench-hf-self-harm
+  name: Self-harm
+  description: Self-harm - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-suicidal-and-non-suicidal-self-injury
+- id: airbench-hf-suicidal-and-non-suicidal-self-injury
+  name: Suicidal and non-suicidal self Injury
+  description: Suicidal and non-suicidal self Injury - A subcategory of Self-harm
+    in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-self-harm
+  narrowMatch:
+  - airbench-hf-suicide
+  - airbench-hf-cutting
+  - airbench-hf-eating-disorders-(anorexia/-bulimia)
+- id: airbench-hf-political-usage
+  name: Political Usage
+  description: Political Usage - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-political-persuasion
+  - airbench-hf-influencing-politics
+  - airbench-hf-deterring-democratic-participation
+  - airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-political-persuasion
+  name: Political Persuasion
+  description: Political Persuasion - A subcategory of Political Usage in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-political-usage
+  narrowMatch:
+  - airbench-hf-lobbying
+  - airbench-hf-generating-high-volume-campaign-materials
+  - airbench-hf-personalized-or-targeted-campaign-materials
+  - airbench-hf-building-systems-for-political-campaigning-or-lobbying
+  - airbench-hf-building-products-for-political-campaigning-or-lobbying
+  - airbench-hf-political-advertisements
+  - airbench-hf-propaganda
+- id: airbench-hf-influencing-politics
+  name: Influencing Politics
+  description: Influencing Politics - A subcategory of Political Usage in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-political-usage
+  narrowMatch:
+  - airbench-hf-influence-political-decisions
+  - airbench-hf-influence-political-opinions
+- id: airbench-hf-deterring-democratic-participation
+  name: Deterring Democratic Participation
+  description: Deterring Democratic Participation - A subcategory of Political Usage
+    in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-political-usage
+  narrowMatch:
+  - airbench-hf-deterring-participation-in-democratic-processes
+  - airbench-hf-misrepresenting-voting-processes
+  - airbench-hf-misrepresenting-voting-qualifications
+  - airbench-hf-discouraging-voting
+- id: airbench-hf-disrupting-social-order-(china-unique)
+  name: Disrupting Social Order (China-unique)
+  description: Disrupting Social Order (China-unique) - A subcategory of Political
+    Usage in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-political-usage
+  narrowMatch:
+  - airbench-hf-opposing-constitutional-principles
+  - airbench-hf-subverting-state-power
+  - airbench-hf-undermining-national-unity
+  - airbench-hf-damaging-state-interests
+  - airbench-hf-damaging-state-honor
+  - airbench-hf-inciting-unlawful-assemblies
+  - airbench-hf-inciting-unlawful-associations
+  - airbench-hf-inciting-unlawful-processions
+  - airbench-hf-inciting-unlawful-demonstrations
+  - airbench-hf-undermining-religious-policies
+  - airbench-hf-promoting-cults
+  - airbench-hf-promoting-feudal-superstitions
+- id: airbench-hf-economic-harm
+  name: Economic Harm
+  description: Economic Harm - A subcategory of None in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch: []
+  narrowMatch:
+  - airbench-hf-high-risk-financial-activities
+  - airbench-hf-unfair-market-practices
+  - airbench-hf-disempowering-workers
+  - airbench-hf-schemes
+- id: airbench-hf-high-risk-financial-activities
+  name: High-Risk Financial Activities
+  description: High-Risk Financial Activities - A subcategory of Economic Harm in
+    the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-economic-harm
+  narrowMatch:
+  - airbench-hf-gambling-(e.g.,-sports-betting)
+  - airbench-hf-payday-lending
+- id: airbench-hf-unfair-market-practices
+  name: Unfair Market Practices
+  description: Unfair Market Practices - A subcategory of Economic Harm in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-economic-harm
+  narrowMatch:
+  - airbench-hf-exploiting-advantages-for-monopolistic-practices
+  - airbench-hf-anticompetitive-practices
+- id: airbench-hf-disempowering-workers
+  name: Disempowering Workers
+  description: Disempowering Workers - A subcategory of Economic Harm in the AIR-Bench
+    taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-economic-harm
+  narrowMatch:
+  - airbench-hf-undermine-workers'-rights
+  - airbench-hf-worsen-job-quality
+  - airbench-hf-encourage-undue-worker-surveillance
+  - airbench-hf-cause-harmful-labor-force-disruptions
+- id: airbench-hf-schemes
+  name: Schemes
+  description: Schemes - A subcategory of Economic Harm in the AIR-Bench taxonomy.
+  isDefinedByTaxonomy: airbench-hf
+  broadMatch:
+  - airbench-hf-economic-harm
+  narrowMatch:
+  - airbench-hf-pyramid-schemes
+  - airbench-hf-multi-level-marketing
+risks:
+- id: airbench-hf-network-intrusion
+  name: Network intrusion
+  description: Risk related to Network intrusion within the Confidentiality category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-confidentiality
+- id: airbench-hf-vulnerability-probing
+  name: Vulnerability probing
+  description: Risk related to Vulnerability probing within the Confidentiality category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-confidentiality
+- id: airbench-hf-spoofing
+  name: Spoofing
+  description: Risk related to Spoofing within the Confidentiality category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-confidentiality
+- id: airbench-hf-spear-phishing
+  name: Spear phishing
+  description: Risk related to Spear phishing within the Confidentiality category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-confidentiality
+- id: airbench-hf-social-engineering
+  name: Social engineering
+  description: Risk related to Social engineering within the Confidentiality category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-confidentiality
+- id: airbench-hf-unauthorized-network-entry
+  name: Unauthorized network entry
+  description: Risk related to Unauthorized network entry within the Confidentiality
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-confidentiality
+- id: airbench-hf-control-override-(safety/privacy-filters)
+  name: Control override (safety/privacy filters)
+  description: Risk related to Control override (safety/privacy filters) within the
+    Integrity category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-integrity
+- id: airbench-hf-malware
+  name: Malware
+  description: Risk related to Malware within the Integrity category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-integrity
+- id: airbench-hf-packet-forgery
+  name: Packet forgery
+  description: Risk related to Packet forgery within the Integrity category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-integrity
+- id: airbench-hf-data-tampering
+  name: Data tampering
+  description: Risk related to Data tampering within the Integrity category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-integrity
+- id: airbench-hf-system/website-impairment
+  name: System/Website impairment
+  description: Risk related to System/Website impairment within the Availability category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-availability
+- id: airbench-hf-network-disruption
+  name: Network disruption
+  description: Risk related to Network disruption within the Availability category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-availability
+- id: airbench-hf-spam
+  name: Spam
+  description: Risk related to Spam within the Fraud category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-fraud
+- id: airbench-hf-scams
+  name: Scams
+  description: Risk related to Scams within the Fraud category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-fraud
+- id: airbench-hf-phishing/catfishing
+  name: Phishing/Catfishing
+  description: Risk related to Phishing/Catfishing within the Fraud category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-fraud
+- id: airbench-hf-pseudo-pharmaceuticals
+  name: Pseudo-pharmaceuticals
+  description: Risk related to Pseudo-pharmaceuticals within the Fraud category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-fraud
+- id: airbench-hf-impersonating-others
+  name: Impersonating others
+  description: Risk related to Impersonating others within the Fraud category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-fraud
+- id: airbench-hf-plagiarism
+  name: Plagiarism
+  description: Risk related to Plagiarism within the Academic dishonesty category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-academic-dishonesty
+- id: airbench-hf-promoting-academic-dishonesty
+  name: Promoting academic dishonesty
+  description: Risk related to Promoting academic dishonesty within the Academic dishonesty
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-academic-dishonesty
+- id: airbench-hf-generating-or-promoting-misinformation
+  name: Generating or promoting misinformation
+  description: Risk related to Generating or promoting misinformation within the Mis/disinformation
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-mis/disinformation
+- id: airbench-hf-fake-online-engagement-(fake-reviews,-fake-grassroots-support)
+  name: Fake online engagement (fake reviews, fake grassroots support)
+  description: Risk related to Fake online engagement (fake reviews, fake grassroots
+    support) within the Mis/disinformation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-mis/disinformation
+- id: airbench-hf-contents-aim-to-turn-a-community-against-itself.
+  name: Contents aim to turn a community against itself.
+  description: Risk related to Contents aim to turn a community against itself. within
+    the Sowing Division category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-sowing-division
+- id: airbench-hf-content-to-divert-attention-from-harmful-actions
+  name: Content to divert attention from harmful actions
+  description: Risk related to Content to divert attention from harmful actions within
+    the Sowing Division category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-sowing-division
+- id: airbench-hf-automated-social-media-posts
+  name: Automated social media posts
+  description: Risk related to Automated social media posts within the Misrepresentation
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-misrepresentation
+- id: airbench-hf-not-labeling-content-as-ai-generated-(using-chatbots-to-convince-people-they-are-communicating-with-a-human)
+  name: Not labeling content as AI-generated (Using chatbots to convince people they
+    are communicating with a human)
+  description: Risk related to Not labeling content as AI-generated (Using chatbots
+    to convince people they are communicating with a human) within the Misrepresentation
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-misrepresentation
+- id: airbench-hf-impersonating-humans
+  name: Impersonating humans
+  description: Risk related to Impersonating humans within the Misrepresentation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-misrepresentation
+- id: airbench-hf-disparagement
+  name: Disparagement
+  description: Risk related to Disparagement within the Types of Defamation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-types-of-defamation
+- id: airbench-hf-libel
+  name: Libel
+  description: Risk related to Libel within the Types of Defamation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-types-of-defamation
+- id: airbench-hf-slander
+  name: Slander
+  description: Risk related to Slander within the Types of Defamation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-types-of-defamation
+- id: airbench-hf-ip-rights/-trade-secrets
+  name: IP Rights/ Trade Secrets
+  description: Risk related to IP Rights/ Trade Secrets within the Specific Types
+    of Rights category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-specific-types-of-rights
+- id: airbench-hf-portrait-rights
+  name: Portrait rights
+  description: Risk related to Portrait rights within the Specific Types of Rights
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-specific-types-of-rights
+- id: airbench-hf-reputation-rights
+  name: Reputation rights
+  description: Risk related to Reputation rights within the Specific Types of Rights
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-specific-types-of-rights
+- id: airbench-hf-honor-rights
+  name: Honor rights
+  description: Risk related to Honor rights within the Specific Types of Rights category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-specific-types-of-rights
+- id: airbench-hf-name-rights
+  name: Name rights
+  description: Risk related to Name rights within the Specific Types of Rights category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-specific-types-of-rights
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---race
+  name: Discrimination in employment, benefits, or services - Race
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Race within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---caste
+  name: Discrimination in employment, benefits, or services - Caste
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Caste within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---social-behaviors
+  name: Discrimination in employment, benefits, or services - Social behaviors
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Social behaviors within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---physical-characteristics
+  name: Discrimination in employment, benefits, or services - Physical Characteristics
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Physical Characteristics within the Discrimination/Protected Characteristics
+    Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---mental-characteristics
+  name: Discrimination in employment, benefits, or services - Mental Characteristics
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Mental Characteristics within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---predicted-personality
+  name: Discrimination in employment, benefits, or services - Predicted Personality
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Predicted Personality within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---health-conditions
+  name: Discrimination in employment, benefits, or services - Health conditions
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Health conditions within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---disability
+  name: Discrimination in employment, benefits, or services - Disability
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Disability within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---pregnancy-status
+  name: Discrimination in employment, benefits, or services - Pregnancy Status
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Pregnancy Status within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---genetic-information
+  name: Discrimination in employment, benefits, or services - Genetic Information
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Genetic Information within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---occupation
+  name: Discrimination in employment, benefits, or services - Occupation
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Occupation within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---ethnicity
+  name: Discrimination in employment, benefits, or services - Ethnicity
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Ethnicity within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---age
+  name: Discrimination in employment, benefits, or services - Age
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Age within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---race
+  name: Characterization of identity - Race
+  description: Risk related to Characterization of identity - Race within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---ethnicity
+  name: Characterization of identity - Ethnicity
+  description: Risk related to Characterization of identity - Ethnicity within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---color
+  name: Characterization of identity - Color
+  description: Risk related to Characterization of identity - Color within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---gender
+  name: Characterization of identity - Gender
+  description: Risk related to Characterization of identity - Gender within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---sexual-orientation
+  name: Characterization of identity - Sexual orientation
+  description: Risk related to Characterization of identity - Sexual orientation within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---religion
+  name: Characterization of identity - Religion
+  description: Risk related to Characterization of identity - Religion within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---beliefs
+  name: Characterization of identity - Beliefs
+  description: Risk related to Characterization of identity - Beliefs within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---nationality
+  name: Characterization of identity - Nationality
+  description: Risk related to Characterization of identity - Nationality within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---geographic-region
+  name: Characterization of identity - Geographic region
+  description: Risk related to Characterization of identity - Geographic region within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---color
+  name: Discrimination in employment, benefits, or services - Color
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Color within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---caste
+  name: Characterization of identity - Caste
+  description: Risk related to Characterization of identity - Caste within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---social-behaviors
+  name: Characterization of identity - Social behaviors
+  description: Risk related to Characterization of identity - Social behaviors within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---physical-characteristics
+  name: Characterization of identity - Physical Characteristics
+  description: Risk related to Characterization of identity - Physical Characteristics
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---mental-characteristics
+  name: Characterization of identity - Mental Characteristics
+  description: Risk related to Characterization of identity - Mental Characteristics
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---predicted-personality
+  name: Characterization of identity - Predicted Personality
+  description: Risk related to Characterization of identity - Predicted Personality
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---health-conditions
+  name: Characterization of identity - Health conditions
+  description: Risk related to Characterization of identity - Health conditions within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---disability
+  name: Characterization of identity - Disability
+  description: Risk related to Characterization of identity - Disability within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---pregnancy-status
+  name: Characterization of identity - Pregnancy Status
+  description: Risk related to Characterization of identity - Pregnancy Status within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---genetic-information
+  name: Characterization of identity - Genetic Information
+  description: Risk related to Characterization of identity - Genetic Information
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---occupation
+  name: Characterization of identity - Occupation
+  description: Risk related to Characterization of identity - Occupation within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---gender
+  name: Discrimination in employment, benefits, or services - Gender
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Gender within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-characterization-of-identity---age
+  name: Characterization of identity - Age
+  description: Risk related to Characterization of identity - Age within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---race
+  name: Classification of individuals - Race
+  description: Risk related to Classification of individuals - Race within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---ethnicity
+  name: Classification of individuals - Ethnicity
+  description: Risk related to Classification of individuals - Ethnicity within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---color
+  name: Classification of individuals - Color
+  description: Risk related to Classification of individuals - Color within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---gender
+  name: Classification of individuals - Gender
+  description: Risk related to Classification of individuals - Gender within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---sexual-orientation
+  name: Classification of individuals - Sexual orientation
+  description: Risk related to Classification of individuals - Sexual orientation
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---religion
+  name: Classification of individuals - Religion
+  description: Risk related to Classification of individuals - Religion within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---beliefs
+  name: Classification of individuals - Beliefs
+  description: Risk related to Classification of individuals - Beliefs within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---nationality
+  name: Classification of individuals - Nationality
+  description: Risk related to Classification of individuals - Nationality within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---geographic-region
+  name: Classification of individuals - Geographic region
+  description: Risk related to Classification of individuals - Geographic region within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---sexual-orientation
+  name: Discrimination in employment, benefits, or services - Sexual orientation
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Sexual orientation within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---caste
+  name: Classification of individuals - Caste
+  description: Risk related to Classification of individuals - Caste within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---social-behaviors
+  name: Classification of individuals - Social behaviors
+  description: Risk related to Classification of individuals - Social behaviors within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---physical-characteristics
+  name: Classification of individuals - Physical Characteristics
+  description: Risk related to Classification of individuals - Physical Characteristics
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---mental-characteristics
+  name: Classification of individuals - Mental Characteristics
+  description: Risk related to Classification of individuals - Mental Characteristics
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---predicted-personality
+  name: Classification of individuals - Predicted Personality
+  description: Risk related to Classification of individuals - Predicted Personality
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---health-conditions
+  name: Classification of individuals - Health conditions
+  description: Risk related to Classification of individuals - Health conditions within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---disability
+  name: Classification of individuals - Disability
+  description: Risk related to Classification of individuals - Disability within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---pregnancy-status
+  name: Classification of individuals - Pregnancy Status
+  description: Risk related to Classification of individuals - Pregnancy Status within
+    the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---genetic-information
+  name: Classification of individuals - Genetic Information
+  description: Risk related to Classification of individuals - Genetic Information
+    within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---occupation
+  name: Classification of individuals - Occupation
+  description: Risk related to Classification of individuals - Occupation within the
+    Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---religion
+  name: Discrimination in employment, benefits, or services - Religion
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Religion within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-classification-of-individuals---age
+  name: Classification of individuals - Age
+  description: Risk related to Classification of individuals - Age within the Discrimination/Protected
+    Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---beliefs
+  name: Discrimination in employment, benefits, or services - Beliefs
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Beliefs within the Discrimination/Protected Characteristics Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---nationality
+  name: Discrimination in employment, benefits, or services - Nationality
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Nationality within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-discrimination-in-employment,-benefits,-or-services---geographic-region
+  name: Discrimination in employment, benefits, or services - Geographic region
+  description: Risk related to Discrimination in employment, benefits, or services
+    - Geographic region within the Discrimination/Protected Characteristics Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-discrimination/protected-characteristics-combinations
+- id: airbench-hf-unauthorized-generation---pii-(personal-identifiable-information)
+  name: Unauthorized generation - PII (Personal Identifiable Information)
+  description: Risk related to Unauthorized generation - PII (Personal Identifiable
+    Information) within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---pii-(personal-identifiable-information)
+  name: Unauthorized disclosure - PII (Personal Identifiable Information)
+  description: Risk related to Unauthorized disclosure - PII (Personal Identifiable
+    Information) within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---health-data
+  name: Unauthorized disclosure - Health data
+  description: Risk related to Unauthorized disclosure - Health data within the Privacy
+    Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---location-data
+  name: Unauthorized disclosure - Location data
+  description: Risk related to Unauthorized disclosure - Location data within the
+    Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---demographic-data
+  name: Unauthorized disclosure - Demographic data
+  description: Risk related to Unauthorized disclosure - Demographic data within the
+    Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---biometric-data-(facial-recognition)
+  name: Unauthorized disclosure - Biometric data (facial recognition)
+  description: Risk related to Unauthorized disclosure - Biometric data (facial recognition)
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---educational-records
+  name: Unauthorized disclosure - Educational records
+  description: Risk related to Unauthorized disclosure - Educational records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---financial-records
+  name: Unauthorized disclosure - Financial records
+  description: Risk related to Unauthorized disclosure - Financial records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---behavioral/-preference-data
+  name: Unauthorized disclosure - Behavioral/ Preference data
+  description: Risk related to Unauthorized disclosure - Behavioral/ Preference data
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-disclosure---communication-records
+  name: Unauthorized disclosure - Communication Records
+  description: Risk related to Unauthorized disclosure - Communication Records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---pii-(personal-identifiable-information)
+  name: Unauthorized distribution - PII (Personal Identifiable Information)
+  description: Risk related to Unauthorized distribution - PII (Personal Identifiable
+    Information) within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-generation---health-data
+  name: Unauthorized generation - Health data
+  description: Risk related to Unauthorized generation - Health data within the Privacy
+    Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---health-data
+  name: Unauthorized distribution - Health data
+  description: Risk related to Unauthorized distribution - Health data within the
+    Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---location-data
+  name: Unauthorized distribution - Location data
+  description: Risk related to Unauthorized distribution - Location data within the
+    Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---demographic-data
+  name: Unauthorized distribution - Demographic data
+  description: Risk related to Unauthorized distribution - Demographic data within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---biometric-data-(facial-recognition)
+  name: Unauthorized distribution - Biometric data (facial recognition)
+  description: Risk related to Unauthorized distribution - Biometric data (facial
+    recognition) within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---educational-records
+  name: Unauthorized distribution - Educational records
+  description: Risk related to Unauthorized distribution - Educational records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---financial-records
+  name: Unauthorized distribution - Financial records
+  description: Risk related to Unauthorized distribution - Financial records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---behavioral/-preference-data
+  name: Unauthorized distribution - Behavioral/ Preference data
+  description: Risk related to Unauthorized distribution - Behavioral/ Preference
+    data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-distribution---communication-records
+  name: Unauthorized distribution - Communication Records
+  description: Risk related to Unauthorized distribution - Communication Records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---pii-(personal-identifiable-information)
+  name: Unauthorized collection/gathering/stealing - PII (Personal Identifiable Information)
+  description: Risk related to Unauthorized collection/gathering/stealing - PII (Personal
+    Identifiable Information) within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---health-data
+  name: Unauthorized collection/gathering/stealing - Health data
+  description: Risk related to Unauthorized collection/gathering/stealing - Health
+    data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-generation---location-data
+  name: Unauthorized generation - Location data
+  description: Risk related to Unauthorized generation - Location data within the
+    Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---location-data
+  name: Unauthorized collection/gathering/stealing - Location data
+  description: Risk related to Unauthorized collection/gathering/stealing - Location
+    data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---demographic-data
+  name: Unauthorized collection/gathering/stealing - Demographic data
+  description: Risk related to Unauthorized collection/gathering/stealing - Demographic
+    data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---biometric-data-(facial-recognition)
+  name: Unauthorized collection/gathering/stealing - Biometric data (facial recognition)
+  description: Risk related to Unauthorized collection/gathering/stealing - Biometric
+    data (facial recognition) within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---educational-records
+  name: Unauthorized collection/gathering/stealing - Educational records
+  description: Risk related to Unauthorized collection/gathering/stealing - Educational
+    records within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---financial-records
+  name: Unauthorized collection/gathering/stealing - Financial records
+  description: Risk related to Unauthorized collection/gathering/stealing - Financial
+    records within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---behavioral/-preference-data
+  name: Unauthorized collection/gathering/stealing - Behavioral/ Preference data
+  description: Risk related to Unauthorized collection/gathering/stealing - Behavioral/
+    Preference data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-collection/gathering/stealing---communication-records
+  name: Unauthorized collection/gathering/stealing - Communication Records
+  description: Risk related to Unauthorized collection/gathering/stealing - Communication
+    Records within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---pii-(personal-identifiable-information)
+  name: Unauthorized processing - PII (Personal Identifiable Information)
+  description: Risk related to Unauthorized processing - PII (Personal Identifiable
+    Information) within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---health-data
+  name: Unauthorized processing - Health data
+  description: Risk related to Unauthorized processing - Health data within the Privacy
+    Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---location-data
+  name: Unauthorized processing - Location data
+  description: Risk related to Unauthorized processing - Location data within the
+    Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-generation---demographic-data
+  name: Unauthorized generation - Demographic data
+  description: Risk related to Unauthorized generation - Demographic data within the
+    Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---demographic-data
+  name: Unauthorized processing - Demographic data
+  description: Risk related to Unauthorized processing - Demographic data within the
+    Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---biometric-data-(facial-recognition)
+  name: Unauthorized processing - Biometric data (facial recognition)
+  description: Risk related to Unauthorized processing - Biometric data (facial recognition)
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---educational-records
+  name: Unauthorized processing - Educational records
+  description: Risk related to Unauthorized processing - Educational records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---financial-records
+  name: Unauthorized processing - Financial records
+  description: Risk related to Unauthorized processing - Financial records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---behavioral/-preference-data
+  name: Unauthorized processing - Behavioral/ Preference data
+  description: Risk related to Unauthorized processing - Behavioral/ Preference data
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-processing---communication-records
+  name: Unauthorized processing - Communication Records
+  description: Risk related to Unauthorized processing - Communication Records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---pii-(personal-identifiable-information)
+  name: Unauthorized inference/synthesis - PII (Personal Identifiable Information)
+  description: Risk related to Unauthorized inference/synthesis - PII (Personal Identifiable
+    Information) within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---health-data
+  name: Unauthorized inference/synthesis - Health data
+  description: Risk related to Unauthorized inference/synthesis - Health data within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---location-data
+  name: Unauthorized inference/synthesis - Location data
+  description: Risk related to Unauthorized inference/synthesis - Location data within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---demographic-data
+  name: Unauthorized inference/synthesis - Demographic data
+  description: Risk related to Unauthorized inference/synthesis - Demographic data
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-generation---biometric-data-(facial-recognition)
+  name: Unauthorized generation - Biometric data (facial recognition)
+  description: Risk related to Unauthorized generation - Biometric data (facial recognition)
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---biometric-data-(facial-recognition)
+  name: Unauthorized inference/synthesis - Biometric data (facial recognition)
+  description: Risk related to Unauthorized inference/synthesis - Biometric data (facial
+    recognition) within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---educational-records
+  name: Unauthorized inference/synthesis - Educational records
+  description: Risk related to Unauthorized inference/synthesis - Educational records
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---financial-records
+  name: Unauthorized inference/synthesis - Financial records
+  description: Risk related to Unauthorized inference/synthesis - Financial records
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---behavioral/-preference-data
+  name: Unauthorized inference/synthesis - Behavioral/ Preference data
+  description: Risk related to Unauthorized inference/synthesis - Behavioral/ Preference
+    data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-inference/synthesis---communication-records
+  name: Unauthorized inference/synthesis - Communication Records
+  description: Risk related to Unauthorized inference/synthesis - Communication Records
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---pii-(personal-identifiable-information)
+  name: Non-consensual tracking/monitoring/stalking/spyware - PII (Personal Identifiable
+    Information)
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - PII (Personal Identifiable Information) within the Privacy Violations/Sensitive
+    Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---health-data
+  name: Non-consensual tracking/monitoring/stalking/spyware - Health data
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - Health data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---location-data
+  name: Non-consensual tracking/monitoring/stalking/spyware - Location data
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - Location data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---demographic-data
+  name: Non-consensual tracking/monitoring/stalking/spyware - Demographic data
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - Demographic data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---biometric-data-(facial-recognition)
+  name: Non-consensual tracking/monitoring/stalking/spyware - Biometric data (facial
+    recognition)
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - Biometric data (facial recognition) within the Privacy Violations/Sensitive
+    Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-generation---educational-records
+  name: Unauthorized generation - Educational records
+  description: Risk related to Unauthorized generation - Educational records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---educational-records
+  name: Non-consensual tracking/monitoring/stalking/spyware - Educational records
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - Educational records within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---financial-records
+  name: Non-consensual tracking/monitoring/stalking/spyware - Financial records
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - Financial records within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---behavioral/-preference-data
+  name: Non-consensual tracking/monitoring/stalking/spyware - Behavioral/ Preference
+    data
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - Behavioral/ Preference data within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-non-consensual-tracking/monitoring/stalking/spyware---communication-records
+  name: Non-consensual tracking/monitoring/stalking/spyware - Communication Records
+  description: Risk related to Non-consensual tracking/monitoring/stalking/spyware
+    - Communication Records within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---pii-(personal-identifiable-information)
+  name: Model Attacks (membership inference, model inversion) - PII (Personal Identifiable
+    Information)
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - PII (Personal Identifiable Information) within the Privacy Violations/Sensitive
+    Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---health-data
+  name: Model Attacks (membership inference, model inversion) - Health data
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - Health data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---location-data
+  name: Model Attacks (membership inference, model inversion) - Location data
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - Location data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---demographic-data
+  name: Model Attacks (membership inference, model inversion) - Demographic data
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - Demographic data within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---biometric-data-(facial-recognition)
+  name: Model Attacks (membership inference, model inversion) - Biometric data (facial
+    recognition)
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - Biometric data (facial recognition) within the Privacy Violations/Sensitive
+    Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---educational-records
+  name: Model Attacks (membership inference, model inversion) - Educational records
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - Educational records within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-generation---financial-records
+  name: Unauthorized generation - Financial records
+  description: Risk related to Unauthorized generation - Financial records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---financial-records
+  name: Model Attacks (membership inference, model inversion) - Financial records
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - Financial records within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---behavioral/-preference-data
+  name: Model Attacks (membership inference, model inversion) - Behavioral/ Preference
+    data
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - Behavioral/ Preference data within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-model-attacks-(membership-inference,-model-inversion)---communication-records
+  name: Model Attacks (membership inference, model inversion) - Communication Records
+  description: Risk related to Model Attacks (membership inference, model inversion)
+    - Communication Records within the Privacy Violations/Sensitive Data Combinations
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-generation---behavioral/-preference-data
+  name: Unauthorized generation - Behavioral/ Preference data
+  description: Risk related to Unauthorized generation - Behavioral/ Preference data
+    within the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-unauthorized-generation---communication-records
+  name: Unauthorized generation - Communication Records
+  description: Risk related to Unauthorized generation - Communication Records within
+    the Privacy Violations/Sensitive Data Combinations category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-privacy-violations/sensitive-data-combinations
+- id: airbench-hf-drugs
+  name: drugs
+  description: Risk related to drugs within the Illegal/Regulated substances/goods
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-illegal/regulated-substances/goods
+- id: airbench-hf-human-trafficking
+  name: Human trafficking
+  description: Risk related to Human trafficking within the services/exploitation
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-services/exploitation
+- id: airbench-hf-sexual-exploitation
+  name: Sexual Exploitation
+  description: Risk related to Sexual Exploitation within the services/exploitation
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-services/exploitation
+- id: airbench-hf-prostitution
+  name: Prostitution
+  description: Risk related to Prostitution within the services/exploitation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-services/exploitation
+- id: airbench-hf-involvement-in-data-adversarially-adversely-affects-national-security-or-public-interests
+  name: Involvement in data adversarially adversely affects national security or public
+    interests
+  description: Risk related to Involvement in data adversarially adversely affects
+    national security or public interests within the Other Illegal/Unlawful/Criminal
+    Activities category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-other-illegal/unlawful/criminal-activities
+- id: airbench-hf-undermining-social-stability-(china-unique)
+  name: Undermining social stability (China-unique)
+  description: Risk related to Undermining social stability (China-unique) within
+    the Other Illegal/Unlawful/Criminal Activities category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-other-illegal/unlawful/criminal-activities
+- id: airbench-hf-undermining-international-relations-(china-unique)
+  name: Undermining international relations (China-unique)
+  description: Risk related to Undermining international relations (China-unique)
+    within the Other Illegal/Unlawful/Criminal Activities category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-other-illegal/unlawful/criminal-activities
+- id: airbench-hf-content-abetting/involving/furthering-activities-violating-any-applicable-law
+  name: Content abetting/involving/furthering activities violating any applicable
+    law
+  description: Risk related to Content abetting/involving/furthering activities violating
+    any applicable law within the Other Illegal/Unlawful/Criminal Activities category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-other-illegal/unlawful/criminal-activities
+- id: airbench-hf-financing-eligibility/creditworthiness
+  name: Financing eligibility/Creditworthiness
+  description: Risk related to Financing eligibility/Creditworthiness within the Automated
+    Decision-Making category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-profiling
+  name: Profiling
+  description: Risk related to Profiling within the Automated Decision-Making category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-criminal-justice/predictive-policing
+  name: Criminal justice/Predictive policing
+  description: Risk related to Criminal justice/Predictive policing within the Automated
+    Decision-Making category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-adversely-affects-legal-rights
+  name: Adversely affects legal rights
+  description: Risk related to Adversely affects legal rights within the Automated
+    Decision-Making category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-employment
+  name: Employment
+  description: Risk related to Employment within the Automated Decision-Making category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-social-scoring
+  name: Social scoring
+  description: Risk related to Social scoring within the Automated Decision-Making
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-housing-eligibility
+  name: Housing eligibility
+  description: Risk related to Housing eligibility within the Automated Decision-Making
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-education-eligibility
+  name: Education eligibility
+  description: Risk related to Education eligibility within the Automated Decision-Making
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-migration-eligibility
+  name: Migration eligibility
+  description: Risk related to Migration eligibility within the Automated Decision-Making
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-insurance-eligibility
+  name: Insurance eligibility
+  description: Risk related to Insurance eligibility within the Automated Decision-Making
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-automated-decision-making
+- id: airbench-hf-heavy-machinery
+  name: Heavy machinery
+  description: Risk related to Heavy machinery within the Autonomous Unsafe Operation
+    of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-transportation
+  name: Transportation
+  description: Risk related to Transportation within the Autonomous Unsafe Operation
+    of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-energy/electrical-grids
+  name: Energy/Electrical grids
+  description: Risk related to Energy/Electrical grids within the Autonomous Unsafe
+    Operation of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-nuclear-facilities
+  name: Nuclear facilities
+  description: Risk related to Nuclear facilities within the Autonomous Unsafe Operation
+    of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-aircraft-navigation/air-traffic-control
+  name: Aircraft navigation/Air traffic control
+  description: Risk related to Aircraft navigation/Air traffic control within the
+    Autonomous Unsafe Operation of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-communication-systems
+  name: Communication systems
+  description: Risk related to Communication systems within the Autonomous Unsafe
+    Operation of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-water-treatment-facilities
+  name: Water treatment facilities
+  description: Risk related to Water treatment facilities within the Autonomous Unsafe
+    Operation of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-life-support
+  name: Life support
+  description: Risk related to Life support within the Autonomous Unsafe Operation
+    of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-weapon-systems/battlefield-management
+  name: Weapon systems/Battlefield management
+  description: Risk related to Weapon systems/Battlefield management within the Autonomous
+    Unsafe Operation of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-emergency-services
+  name: Emergency services
+  description: Risk related to Emergency services within the Autonomous Unsafe Operation
+    of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-other-unauthorized-actions-on-behalf-of-users
+  name: Other unauthorized actions on behalf of users
+  description: Risk related to Other unauthorized actions on behalf of users within
+    the Autonomous Unsafe Operation of Systems category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-autonomous-unsafe-operation-of-systems
+- id: airbench-hf-legal
+  name: Legal
+  description: Risk related to Legal within the Advice in Heavily Regulated Industries
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-advice-in-heavily-regulated-industries
+- id: airbench-hf-medical/pharmaceutical
+  name: Medical/Pharmaceutical
+  description: Risk related to Medical/Pharmaceutical within the Advice in Heavily
+    Regulated Industries category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-advice-in-heavily-regulated-industries
+- id: airbench-hf-accounting
+  name: Accounting
+  description: Risk related to Accounting within the Advice in Heavily Regulated Industries
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-advice-in-heavily-regulated-industries
+- id: airbench-hf-financial
+  name: Financial
+  description: Risk related to Financial within the Advice in Heavily Regulated Industries
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-advice-in-heavily-regulated-industries
+- id: airbench-hf-government-services
+  name: Government services
+  description: Risk related to Government services within the Advice in Heavily Regulated
+    Industries category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-advice-in-heavily-regulated-industries
+- id: airbench-hf-bodily-destruction
+  name: Bodily destruction
+  description: Risk related to Bodily destruction within the Depicting Violence category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-depicting-violence
+- id: airbench-hf-bodily-mutilation
+  name: Bodily mutilation
+  description: Risk related to Bodily mutilation within the Depicting Violence category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-depicting-violence
+- id: airbench-hf-torture/abuse
+  name: Torture/abuse
+  description: Risk related to Torture/abuse within the Depicting Violence category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-depicting-violence
+- id: airbench-hf-animal-abuse
+  name: Animal abuse
+  description: Risk related to Animal abuse within the Depicting Violence category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-depicting-violence
+- id: airbench-hf-activities-meant-to-kill
+  name: Activities meant to kill
+  description: Risk related to Activities meant to kill within the Depicting Violence
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-depicting-violence
+- id: airbench-hf-guns
+  name: Guns
+  description: Risk related to Guns within the Weapon Usage & Development category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-weapon-usage-development
+- id: airbench-hf-explosives/dangerous-materials
+  name: Explosives/Dangerous Materials
+  description: Risk related to Explosives/Dangerous Materials within the Weapon Usage
+    & Development category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-weapon-usage-development
+- id: airbench-hf-bioweapons/viruses/gain-of-function
+  name: Bioweapons/Viruses/Gain-of-function
+  description: Risk related to Bioweapons/Viruses/Gain-of-function within the Weapon
+    Usage & Development category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-weapon-usage-development
+- id: airbench-hf-nuclear-weapons
+  name: Nuclear Weapons
+  description: Risk related to Nuclear Weapons within the Weapon Usage & Development
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-weapon-usage-development
+- id: airbench-hf-chemical-weapons
+  name: Chemical Weapons
+  description: Risk related to Chemical Weapons within the Weapon Usage & Development
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-weapon-usage-development
+- id: airbench-hf-radiological-weapons
+  name: Radiological Weapons
+  description: Risk related to Radiological Weapons within the Weapon Usage & Development
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-weapon-usage-development
+- id: airbench-hf-military
+  name: Military
+  description: Risk related to Military within the Military and Warfare category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-military-and-warfare
+- id: airbench-hf-warfare
+  name: Warfare
+  description: Risk related to Warfare within the Military and Warfare category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-military-and-warfare
+- id: airbench-hf-extremism
+  name: Extremism
+  description: Risk related to Extremism within the Supporting Malicious Organized
+    Groups category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-supporting-malicious-organized-groups
+- id: airbench-hf-terrorism
+  name: Terrorism
+  description: Risk related to Terrorism within the Supporting Malicious Organized
+    Groups category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-supporting-malicious-organized-groups
+- id: airbench-hf-criminal-organization
+  name: Criminal organization
+  description: Risk related to Criminal organization within the Supporting Malicious
+    Organized Groups category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-supporting-malicious-organized-groups
+- id: airbench-hf-glorifying-violence,-abuse,-or-the-suffering-of-others
+  name: Glorifying violence, abuse, or the suffering of others
+  description: Risk related to Glorifying violence, abuse, or the suffering of others
+    within the Celebrating Suffering category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-celebrating-suffering
+- id: airbench-hf-belittling-victimhood-or-violent-events
+  name: Belittling victimhood or violent events
+  description: Risk related to Belittling victimhood or violent events within the
+    Celebrating Suffering category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-celebrating-suffering
+- id: airbench-hf-denying-or-minimizing-well-documented,-major-violent-events-or-the-victimhood-of-such-events/denying-the-deeds-of-martyrdom
+  name: Denying or minimizing well-documented, major violent events or the victimhood
+    of such events/Denying the deeds of martyrdom
+  description: Risk related to Denying or minimizing well-documented, major violent
+    events or the victimhood of such events/Denying the deeds of martyrdom within
+    the Celebrating Suffering category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-celebrating-suffering
+- id: airbench-hf-beautifying-and-whitewashing-acts-of-war-or-aggression
+  name: Beautifying and whitewashing acts of war or aggression
+  description: Risk related to Beautifying and whitewashing acts of war or aggression
+    within the Celebrating Suffering category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-celebrating-suffering
+- id: airbench-hf-property-damage
+  name: Property damage
+  description: Risk related to Property damage within the Violent acts category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-violent-acts
+- id: airbench-hf-environmental
+  name: Environmental
+  description: Risk related to Environmental within the Violent acts category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-violent-acts
+- id: airbench-hf-persons-(including-murder)
+  name: Persons (including murder)
+  description: Risk related to Persons (including murder) within the Violent acts
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-violent-acts
+- id: airbench-hf-animals
+  name: Animals
+  description: Risk related to Animals within the Violent acts category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-violent-acts
+- id: airbench-hf-bullying
+  name: Bullying
+  description: Risk related to Bullying within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-doxing
+  name: Doxing
+  description: Risk related to Doxing within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-cursing
+  name: Cursing
+  description: Risk related to Cursing within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-threats
+  name: Threats
+  description: Risk related to Threats within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-intimidation
+  name: Intimidation
+  description: Risk related to Intimidation within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-shaming
+  name: Shaming
+  description: Risk related to Shaming within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-humiliation
+  name: Humiliation
+  description: Risk related to Humiliation within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-insults/personal-attacks
+  name: Insults/Personal attacks
+  description: Risk related to Insults/Personal attacks within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-abuse
+  name: Abuse
+  description: Risk related to Abuse within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-provoking
+  name: Provoking
+  description: Risk related to Provoking within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-trolling
+  name: Trolling
+  description: Risk related to Trolling within the Harassment category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-harassment
+- id: airbench-hf-race
+  name: Race
+  description: Risk related to Race within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-ethnicity
+  name: Ethnicity
+  description: Risk related to Ethnicity within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-color
+  name: Color
+  description: Risk related to Color within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-gender
+  name: Gender
+  description: Risk related to Gender within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-sexual-orientation
+  name: Sexual orientation
+  description: Risk related to Sexual orientation within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-religion
+  name: Religion
+  description: Risk related to Religion within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-beliefs
+  name: Beliefs
+  description: Risk related to Beliefs within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-nationality
+  name: Nationality
+  description: Risk related to Nationality within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-geographic-region
+  name: Geographic region
+  description: Risk related to Geographic region within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-caste
+  name: Caste
+  description: Risk related to Caste within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-social-behaviors
+  name: Social behaviors
+  description: Risk related to Social behaviors within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-physical-characteristics
+  name: Physical characteristics
+  description: Risk related to Physical characteristics within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-mental-characteristics
+  name: Mental characteristics
+  description: Risk related to Mental characteristics within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-personality
+  name: Personality
+  description: Risk related to Personality within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-health-conditions
+  name: Health conditions
+  description: Risk related to Health conditions within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-disability
+  name: Disability
+  description: Risk related to Disability within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-pregnancy-status
+  name: Pregnancy status
+  description: Risk related to Pregnancy status within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-genetic-information
+  name: Genetic information
+  description: Risk related to Genetic information within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-occupation
+  name: Occupation
+  description: Risk related to Occupation within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-age
+  name: Age
+  description: Risk related to Age within the Hate Speech (Inciting/Promoting/Expressing
+    hatred) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-hate-speech-(inciting/promoting/expressing-hatred)
+- id: airbench-hf-negative-stereotyping-of-any-group
+  name: Negative stereotyping of any group
+  description: Risk related to Negative stereotyping of any group within the Perpetuating
+    Harmful Beliefs category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-perpetuating-harmful-beliefs
+- id: airbench-hf-perpetuating-racism
+  name: Perpetuating racism
+  description: Risk related to Perpetuating racism within the Perpetuating Harmful
+    Beliefs category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-perpetuating-harmful-beliefs
+- id: airbench-hf-perpetuating-sexism
+  name: Perpetuating sexism
+  description: Risk related to Perpetuating sexism within the Perpetuating Harmful
+    Beliefs category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-perpetuating-harmful-beliefs
+- id: airbench-hf-vulgar-terms
+  name: Vulgar terms
+  description: Risk related to Vulgar terms within the Offensive Language category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-offensive-language
+- id: airbench-hf-derogatory-comments
+  name: Derogatory comments
+  description: Risk related to Derogatory comments within the Offensive Language category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-offensive-language
+- id: airbench-hf-obscene
+  name: Obscene
+  description: Risk related to Obscene within the Adult content category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-adult-content
+- id: airbench-hf-suggestive
+  name: Suggestive
+  description: Risk related to Suggestive within the Adult content category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-adult-content
+- id: airbench-hf-sexual-acts
+  name: Sexual acts
+  description: Risk related to Sexual acts within the Adult content category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-adult-content
+- id: airbench-hf-sexual-intercourse
+  name: Sexual intercourse
+  description: Risk related to Sexual intercourse within the Adult content category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-adult-content
+- id: airbench-hf-erotic-chats
+  name: Erotic chats
+  description: Risk related to Erotic chats within the Erotic category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-erotic
+- id: airbench-hf-fetishes
+  name: Fetishes
+  description: Risk related to Fetishes within the Erotic category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-erotic
+- id: airbench-hf-ncii-(non-consensual-intimate-image)
+  name: NCII (Non-consensual Intimate Image)
+  description: Risk related to NCII (Non-consensual Intimate Image) within the Non-Consensual
+    Nudity category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-non-consensual-nudity
+- id: airbench-hf-pornography
+  name: Pornography
+  description: Risk related to Pornography within the Monetized category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-monetized
+- id: airbench-hf-promotion-of-sexual-services
+  name: Promotion of sexual services
+  description: Risk related to Promotion of sexual services within the Monetized category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-monetized
+- id: airbench-hf-grooming
+  name: Grooming
+  description: Risk related to Grooming within the Endangerment, Harm, or Abuse of
+    Children category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-endangerment,-harm,-or-abuse-of-children
+- id: airbench-hf-pedophilia
+  name: Pedophilia
+  description: Risk related to Pedophilia within the Endangerment, Harm, or Abuse
+    of Children category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-endangerment,-harm,-or-abuse-of-children
+- id: airbench-hf-exploiting-or-harming-minors
+  name: Exploiting or Harming minors
+  description: Risk related to Exploiting or Harming minors within the Endangerment,
+    Harm, or Abuse of Children category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-endangerment,-harm,-or-abuse-of-children
+- id: airbench-hf-building-services-targeting-minors/failure-to-employ-age-gating
+  name: Building services targeting minors/failure to employ age-gating
+  description: Risk related to Building services targeting minors/failure to employ
+    age-gating within the Endangerment, Harm, or Abuse of Children category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-endangerment,-harm,-or-abuse-of-children
+- id: airbench-hf-building-services-to-present-a-persona-of-minor
+  name: Building services to present a persona of minor
+  description: Risk related to Building services to present a persona of minor within
+    the Endangerment, Harm, or Abuse of Children category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-endangerment,-harm,-or-abuse-of-children
+- id: airbench-hf-solicitation
+  name: Solicitation
+  description: Risk related to Solicitation within the Child Sexual Abuse category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-child-sexual-abuse
+- id: airbench-hf-csam
+  name: CSAM
+  description: Risk related to CSAM within the Child Sexual Abuse category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-child-sexual-abuse
+- id: airbench-hf-suicide
+  name: Suicide
+  description: Risk related to Suicide within the Suicidal and non-suicidal self Injury
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-suicidal-and-non-suicidal-self-injury
+- id: airbench-hf-cutting
+  name: Cutting
+  description: Risk related to Cutting within the Suicidal and non-suicidal self Injury
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-suicidal-and-non-suicidal-self-injury
+- id: airbench-hf-eating-disorders-(anorexia/-bulimia)
+  name: Eating Disorders (anorexia/ bulimia)
+  description: Risk related to Eating Disorders (anorexia/ bulimia) within the Suicidal
+    and non-suicidal self Injury category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-suicidal-and-non-suicidal-self-injury
+- id: airbench-hf-lobbying
+  name: Lobbying
+  description: Risk related to Lobbying within the Political Persuasion category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-political-persuasion
+- id: airbench-hf-generating-high-volume-campaign-materials
+  name: Generating high-volume campaign materials
+  description: Risk related to Generating high-volume campaign materials within the
+    Political Persuasion category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-political-persuasion
+- id: airbench-hf-personalized-or-targeted-campaign-materials
+  name: Personalized or targeted campaign materials
+  description: Risk related to Personalized or targeted campaign materials within
+    the Political Persuasion category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-political-persuasion
+- id: airbench-hf-building-systems-for-political-campaigning-or-lobbying
+  name: Building systems for political campaigning or lobbying
+  description: Risk related to Building systems for political campaigning or lobbying
+    within the Political Persuasion category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-political-persuasion
+- id: airbench-hf-building-products-for-political-campaigning-or-lobbying
+  name: Building products for political campaigning or lobbying
+  description: Risk related to Building products for political campaigning or lobbying
+    within the Political Persuasion category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-political-persuasion
+- id: airbench-hf-political-advertisements
+  name: Political advertisements
+  description: Risk related to Political advertisements within the Political Persuasion
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-political-persuasion
+- id: airbench-hf-propaganda
+  name: Propaganda
+  description: Risk related to Propaganda within the Political Persuasion category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-political-persuasion
+- id: airbench-hf-influence-political-decisions
+  name: Influence political decisions
+  description: Risk related to Influence political decisions within the Influencing
+    Politics category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-influencing-politics
+- id: airbench-hf-influence-political-opinions
+  name: Influence political opinions
+  description: Risk related to Influence political opinions within the Influencing
+    Politics category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-influencing-politics
+- id: airbench-hf-deterring-participation-in-democratic-processes
+  name: Deterring participation in democratic processes
+  description: Risk related to Deterring participation in democratic processes within
+    the Deterring Democratic Participation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-deterring-democratic-participation
+- id: airbench-hf-misrepresenting-voting-processes
+  name: Misrepresenting voting processes
+  description: Risk related to Misrepresenting voting processes within the Deterring
+    Democratic Participation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-deterring-democratic-participation
+- id: airbench-hf-misrepresenting-voting-qualifications
+  name: Misrepresenting voting qualifications
+  description: Risk related to Misrepresenting voting qualifications within the Deterring
+    Democratic Participation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-deterring-democratic-participation
+- id: airbench-hf-discouraging-voting
+  name: Discouraging voting
+  description: Risk related to Discouraging voting within the Deterring Democratic
+    Participation category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-deterring-democratic-participation
+- id: airbench-hf-opposing-constitutional-principles
+  name: Opposing constitutional principles
+  description: Risk related to Opposing constitutional principles within the Disrupting
+    Social Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-subverting-state-power
+  name: Subverting state power
+  description: Risk related to Subverting state power within the Disrupting Social
+    Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-undermining-national-unity
+  name: Undermining national unity
+  description: Risk related to Undermining national unity within the Disrupting Social
+    Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-damaging-state-interests
+  name: Damaging state interests
+  description: Risk related to Damaging state interests within the Disrupting Social
+    Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-damaging-state-honor
+  name: Damaging state honor
+  description: Risk related to Damaging state honor within the Disrupting Social Order
+    (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-inciting-unlawful-assemblies
+  name: Inciting unlawful assemblies
+  description: Risk related to Inciting unlawful assemblies within the Disrupting
+    Social Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-inciting-unlawful-associations
+  name: Inciting unlawful associations
+  description: Risk related to Inciting unlawful associations within the Disrupting
+    Social Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-inciting-unlawful-processions
+  name: Inciting unlawful processions
+  description: Risk related to Inciting unlawful processions within the Disrupting
+    Social Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-inciting-unlawful-demonstrations
+  name: Inciting unlawful demonstrations
+  description: Risk related to Inciting unlawful demonstrations within the Disrupting
+    Social Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-undermining-religious-policies
+  name: Undermining religious policies
+  description: Risk related to Undermining religious policies within the Disrupting
+    Social Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-promoting-cults
+  name: Promoting cults
+  description: Risk related to Promoting cults within the Disrupting Social Order
+    (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-promoting-feudal-superstitions
+  name: Promoting feudal superstitions
+  description: Risk related to Promoting feudal superstitions within the Disrupting
+    Social Order (China-unique) category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disrupting-social-order-(china-unique)
+- id: airbench-hf-gambling-(e.g.,-sports-betting)
+  name: Gambling (e.g., sports betting)
+  description: Risk related to Gambling (e.g., sports betting) within the High-Risk
+    Financial Activities category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-high-risk-financial-activities
+- id: airbench-hf-payday-lending
+  name: Payday lending
+  description: Risk related to Payday lending within the High-Risk Financial Activities
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-high-risk-financial-activities
+- id: airbench-hf-exploiting-advantages-for-monopolistic-practices
+  name: Exploiting advantages for monopolistic practices
+  description: Risk related to Exploiting advantages for monopolistic practices within
+    the Unfair Market Practices category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-unfair-market-practices
+- id: airbench-hf-anticompetitive-practices
+  name: Anticompetitive practices
+  description: Risk related to Anticompetitive practices within the Unfair Market
+    Practices category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-unfair-market-practices
+- id: airbench-hf-undermine-workers'-rights
+  name: Undermine workers' rights
+  description: Risk related to Undermine workers' rights within the Disempowering
+    Workers category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disempowering-workers
+- id: airbench-hf-worsen-job-quality
+  name: Worsen job quality
+  description: Risk related to Worsen job quality within the Disempowering Workers
+    category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disempowering-workers
+- id: airbench-hf-encourage-undue-worker-surveillance
+  name: Encourage undue worker surveillance
+  description: Risk related to Encourage undue worker surveillance within the Disempowering
+    Workers category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disempowering-workers
+- id: airbench-hf-cause-harmful-labor-force-disruptions
+  name: Cause harmful labor-force disruptions
+  description: Risk related to Cause harmful labor-force disruptions within the Disempowering
+    Workers category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-disempowering-workers
+- id: airbench-hf-pyramid-schemes
+  name: Pyramid schemes
+  description: Risk related to Pyramid schemes within the Schemes category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-schemes
+- id: airbench-hf-multi-level-marketing
+  name: Multi-level marketing
+  description: Risk related to Multi-level marketing within the Schemes category.
+  isDefinedByTaxonomy: airbench-hf
+  isPartOf: airbench-hf-schemes

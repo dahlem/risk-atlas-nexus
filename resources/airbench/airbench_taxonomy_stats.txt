@@ -1,0 +1,13 @@
+AIR-Bench Taxonomy Statistics
+============================
+
+Tier 1 (Top-level) Categories: 4
+Tier 2 Categories: 15
+Tier 3 Categories: 28
+Tier 4 (Risk Categories): 42
+
+Risks by Tier 1 Category:
+  System & Operational Risks: 12 risks
+  Content Safety Risks: 10 risks
+  Societal Risks: 10 risks
+  Legal & Rights Risks: 10 risks

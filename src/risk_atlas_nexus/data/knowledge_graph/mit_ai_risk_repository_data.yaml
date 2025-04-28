@@ -110,9 +110,10 @@ risks:
   isPartOf: mit-ai-risk-domain-3
 - id: mit-ai-risk-subdomain-3.2
   name: Pollution of information ecosystem and loss of consensus reality
-  description: Highly personalized AI-generated misinformation creating ï¿½filter
-    bubblesï¿½ where individuals only see what matches their existing beliefs, undermining
-    shared reality, weakening social cohesion and political processes.
+  description: "Highly personalized AI-generated misinformation creating \xEF\xBF\xBD\
+    filter bubbles\xEF\xBF\xBD where individuals only see what matches their existing\
+    \ beliefs, undermining shared reality, weakening social cohesion and political\
+    \ processes."
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-3
 - id: mit-ai-risk-subdomain-4.1
@@ -182,9 +183,10 @@ risks:
   isPartOf: mit-ai-risk-domain-6
 - id: mit-ai-risk-subdomain-6.4
   name: Competitive dynamics
-  description: AI developers or state-like actors competing in an AI ï¿½raceï¿½ by
-    rapidly developing, deploying, and applying AI systems to maximize strategic or
-    economic advantage, increasing the risk they release unsafe and error-prone systems.
+  description: "AI developers or state-like actors competing in an AI \xEF\xBF\xBD\
+    race\xEF\xBF\xBD by rapidly developing, deploying, and applying AI systems to\
+    \ maximize strategic or economic advantage, increasing the risk they release unsafe\
+    \ and error-prone systems."
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-6
 - id: mit-ai-risk-subdomain-6.5
@@ -243,4 +245,3 @@ risks:
     particularly as AI systems become more advanced and autonomous.
   isDefinedByTaxonomy: mit-ai-risk-repository
   isPartOf: mit-ai-risk-domain-7
-

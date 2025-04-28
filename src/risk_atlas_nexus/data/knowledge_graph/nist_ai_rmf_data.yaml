@@ -2,10 +2,10 @@ documents:
 - id: NIST.AI.600-1
   name: 'Artificial Intelligence Risk Management Framework: Generative Artificial
     Intelligence Profile'
-  description: This document is a cross-sectoral profile of and companion resource
-    for the AI Risk Management Framework (AI RMF 1.0) for Generative AI, pursuant
-    to President Biden’s Executive Order (EO) 14110 on Safe, Secure, and Trustworthy
-    Artificial Intelligence.
+  description: "This document is a cross-sectoral profile of and companion resource\
+    \ for the AI Risk Management Framework (AI RMF 1.0) for Generative AI, pursuant\
+    \ to President Biden\u2019s Executive Order (EO) 14110 on Safe, Secure, and Trustworthy\
+    \ Artificial Intelligence."
   url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
   dateCreated: 2024-07-25
 taxonomies:
@@ -59,9 +59,9 @@ risks:
   isDefinedByTaxonomy: nist-ai-rmf
 - id: nist-confabulation
   name: Confabulation
-  description: The production of confidently stated but erroneous or false content
-    (known colloquially as “hallucinations” or “fabrications”) by which users may
-    be misled or deceived.
+  description: "The production of confidently stated but erroneous or false content\
+    \ (known colloquially as \u201Challucinations\u201D or \u201Cfabrications\u201D\
+    ) by which users may be misled or deceived."
   hasRelatedAction:
   - GV-1.3-002
   - GV-4.1-001
@@ -313,11 +313,11 @@ risks:
   isDefinedByTaxonomy: nist-ai-rmf
 - id: nist-information-security
   name: Information Security
-  description: Lowered barriers for offensive cyber capabilities, including via automated
-    discovery and exploitation of vulnerabilities to ease hacking, malware, phishing,
-    offensive cyber operations, or other cyberattacks; increased attack surface for
-    targeted cyberattacks, which may compromise a system’s availability or the confidentiality
-    or integrity of training data, code, or model weights.
+  description: "Lowered barriers for offensive cyber capabilities, including via automated\
+    \ discovery and exploitation of vulnerabilities to ease hacking, malware, phishing,\
+    \ offensive cyber operations, or other cyberattacks; increased attack surface\
+    \ for targeted cyberattacks, which may compromise a system\u2019s availability\
+    \ or the confidentiality or integrity of training data, code, or model weights."
   hasRelatedAction:
   - GV-1.2-002
   - GV-1.3-003
@@ -472,4 +472,3 @@ risks:
   - MG-3.1-005
   - MG-3.2-007
   isDefinedByTaxonomy: nist-ai-rmf
-

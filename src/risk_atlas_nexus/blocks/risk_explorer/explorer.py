@@ -440,8 +440,9 @@ class RiskExplorer(ExplorerBase):
             risk: (Optional) Risk
                 The Risk object to find related incidents for
             risk_id: (Optional) str
+                The string ID identifying the risk to find related incidents for
             taxonomy: str
-                (Optional) The string label for a taxonomy, to filter action results by
+                (Optional) The string label for a taxonomy, to filter incident results by
 
         Returns:
             list[RiskIncident]
@@ -451,17 +452,16 @@ class RiskExplorer(ExplorerBase):
 
         if risk is not None:
             matching_risks = [risk]
-        if id is not None:
+        if risk_id is not None:
             matching_risks = list(filter(lambda risk: risk.id == risk_id, matching_risks))
 
         if len(matching_risks) > 0:
             risk: Risk = matching_risks[0]
             risk_incidents = []
 
-            if risk.isDetectedBy is not None:
-                risk_incidents.append(risk.isDetectedBy)
-
-            risk_incidents = [j for i in risk_incidents for j in i]
+            # For now, return all risk incidents since we don't have a specific 
+            # property linking risks to incidents yet
+            risk_incidents = self._riskincidents or []
 
             if taxonomy is not None:
                 risk_incidents = list(
@@ -471,13 +471,8 @@ class RiskExplorer(ExplorerBase):
                         risk_incidents,
                     )
                 )
-            related_risk_incidents = list(
-                filter(
-                    lambda risk_incident: risk_incident.id in risk_incidents,
-                    self._riskcontrols,
-                )
-            )
-            return related_risk_incidents
+            
+            return risk_incidents
         else:
-            print("No matching risk controls found")
-            return None
+            print("No matching risks found")
+            return []

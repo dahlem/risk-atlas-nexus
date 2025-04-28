@@ -1,0 +1,12 @@
+Dataset: stanford-crfm/air-bench-2024
+Description: A regulation-aligned safety benchmark for responsible AI development
+Homepage: https://arxiv.org/abs/2407.17436
+License: Unknown
+Features: {'cate-idx': Value(dtype='string', id=None), 'l2-name': Value(dtype='string', id=None), 'l3-name': Value(dtype='string', id=None), 'l4-name': Value(dtype='string', id=None), 'judge_prompt': Value(dtype='string', id=None)}
+Number of examples: 0
+
+Risks by Tier 1 Category:
+
+Number of Tier 2 Categories: 16
+Number of Tier 3 Categories: 43
+Number of Tier 4 Categories (Risks): 314

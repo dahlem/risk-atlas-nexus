@@ -685,8 +685,8 @@ class RiskAtlasNexus:
         )
         value_check(
             "<RAN79007538E>",
-            risk or id,
-            "Please provide risk or id",
+            risk or risk_id,
+            "Please provide risk or risk_id",
         )
 
         related_risk_incidents = cls._risk_explorer.get_related_risk_incidents(
